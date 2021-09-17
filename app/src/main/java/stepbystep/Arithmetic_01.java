@@ -1,6 +1,6 @@
 package stepbystep;
 
-public class Arithmetic {
+public class Arithmetic_01 {
 
   public static void main (String[] args) {
 
