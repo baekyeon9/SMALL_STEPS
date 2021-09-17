@@ -28,7 +28,7 @@
 
 #### 콜렉션 (Collection)
 
-* Iterable <<interface>> : 목록에 데이터를 꺼내는 기능
+* Iterable << interface>> : 목록에 데이터를 꺼내는 기능
 
   * iterator()
 
@@ -36,7 +36,7 @@
 
     
 
-* Collection <<interface>> : 목록에 데이터를 추가/ 삭제 / 검사하는 기능
+* Collection << interface >> : 목록에 데이터를 추가/ 삭제 / 검사하는 기능
 
   * add()
 
@@ -48,7 +48,7 @@
 
     
 
-* List <<interface>> : 목록에 데이터를 index로 다루는 기능
+* List << interface>> : 목록에 데이터를 index로 다루는 기능
 
   * get()
 
@@ -58,5 +58,5 @@
 
     
 
-* ArrayList <<interface>> : 데이터 조회/ 추가/ 삭제/ 검사 + index 
+* ArrayList << interface>> : 데이터 조회/ 추가/ 삭제/ 검사 + index 
 
