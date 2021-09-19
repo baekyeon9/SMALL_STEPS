@@ -1,4 +1,4 @@
-package stepbystep;
+package stepbystep02;
 
 public class Arithmetic_01 {
 

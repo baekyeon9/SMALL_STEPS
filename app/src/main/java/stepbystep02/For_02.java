@@ -1,4 +1,4 @@
-package stepbystep;
+package stepbystep02;
 
 public class For_02 {
   public static void main (String[] args) {
