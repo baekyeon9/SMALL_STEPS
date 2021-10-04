@@ -1,4 +1,4 @@
-package com.share.util;
+package practicemakesperfect.happysharePractice.util;
 
 import java.sql.Date;
 import java.util.Scanner;
