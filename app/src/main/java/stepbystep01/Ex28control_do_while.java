@@ -2,7 +2,7 @@ package stepbystep01;
 
 import java.util.Scanner;
 
-public class ex27control_if {
+public class Ex28control_do_while {
 
   public static void main(String[] args) {
 
@@ -24,8 +24,13 @@ public class ex27control_if {
       System.out.print("국어1: ");
       kor1 = scan.nextInt();
 
-      System.out.println("성적범위(0~100를 벗어났습니다.");
+      if (kor1 < 0 || 100 > kor1) {
+        System.out.println("성적범위(0~100를 벗어났습니다.");
 
+        System.out.print("국어1: ");
+        kor1 = scan.nextInt();
+
+      }
       //      int validate = ( 0 <= kor1 && kor1 <= 100)? 1:0;
       //      System.out.println(validate);
 

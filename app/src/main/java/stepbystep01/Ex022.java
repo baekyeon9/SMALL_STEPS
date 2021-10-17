@@ -1,6 +1,6 @@
 package stepbystep01;
 
-public class ex022 {
+public class Ex022 {
 
   public static void main(String[] args) {
 

@@ -2,7 +2,7 @@ package stepbystep01;
 
 import java.util.Scanner;
 
-public class ex023 {
+public class Ex021 {
 
   public static void main(String[] args) {
 
@@ -21,9 +21,6 @@ public class ex023 {
     System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
     System.out.print("국어1: ");
     kor1 = scan.nextInt();
-
-    System.out.println(0 <= kor1 && kor1 <= 100);
-
     System.out.print("국어2: ");
     kor2 = scan.nextInt();
     System.out.print("국어3: ");
