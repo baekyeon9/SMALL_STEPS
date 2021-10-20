@@ -1,0 +1,32 @@
+// 나눔이야기(후기게시판)
+
+insert into ftp_vol_board(vol_bd_no, user_no, title, content)
+values (1, 1, '유기견 봉사 활동 후기', '입구에서부터 반갑게 맞아주는 강아지들과 함께봉사활동 하러갔다가 되려 귀요미들에게 힐링 받고 왔습니다. 견사 청소와 열악한 시설 보수 공사, 그리고 목욕시키기를 마치고나니 하루가 훌쩍 흘러갔네요.  몸은 고되었지만 뿌듯하고 보람찬 하루였습니다.');
+
+insert into ftp_vol_board(vol_bd_no, user_no, title, content)
+values (2, 3, '점자 벽보 만들기', '시각 장애인들을 위한 점자 벽보를 만들었습니다. 비대면 봉사활동으로 누구나 참여할 수 있다는게 큰 장점입니다. 봉사를 신청하면 재료가 집으로 배달됩니다. 벽보를 제작하면 이 벽보를 가지고 시각장애인들이 점자를 배울 수 있는 자료가 된다고 해요. 저의 작은 재능 기부로 도움을 줄 수 있다는 것에 뿌듯하고 보람찬 시간이었습니다.');
+
+insert into ftp_vol_board(vol_bd_no, user_no, title, content)
+values (3, 4, '청소년 멘토링 봉사활동', '제가 아이들에게 어떤 도움이 될 수 있을 지 시작전에는 고민이 많았지만, 교육 봉사를 하며 작은 것이나마 나누어줄 수 있다는 것만으로도 의미가 있다는 것을 알게되었어요. 제가 참여한 활동은 아이들과 보드게임을 하는 것이었습니다. 보드게임룰을 한 명씩 돌아가면서 설명하고 소통하는 것에 큰 의미가 있었습니다. 앞으로도 제가 할 수 있는 봉사활동을 찾아나가고 싶습니다.');
+
+insert into ftp_vol_board(vol_bd_no, user_no, title, content)
+values (4, 2, '한강 환경 정비 봉사활동', '즐거운 일요일, 한강변을 걸으며 쓰레기를 주우며 보람찬 하루를 보냈습니다. 무더위로 많은 땀이 흘러내렸고 담배꽁초를 줍고 있는 와중에도 새로운 꽁초를 버리는 사람들을 보면서 아, 앞으로도 지속적인 봉사활동이 필요하겠구나 하는 생각이 들었습니다. 여러분! 쓰레기는 늘 쓰레기통에 버리는 습관을 가집시다.^^')
+
+
+
+// 한 줄 후기(봉사활동 후기)
+
+insert into ftp_vol_shortreview(vol_shortreview_no, user_no, vol_no, content)
+values (1, ?, 2, '코딩 재능기부하면서 제 실력도 같이 느는 것 같아요!'); 
+
+insert into ftp_vol_shortreview(vol_shortreview_no, user_no, vol_no, content)
+values (2, ?, 4, '저소득층 한부모 가정 이사지원 활동 추천합니다!'); 
+
+insert into ftp_vol_shortreview(vol_shortreview_no, user_no, vol_no, content)
+values (3, ?, 3, '(비대면) 애착인형만들기~ 인형도 사랑스럽고,힐링에 제격입니다.');
+
+insert into ftp_vol_shortreview(vol_shortreview_no, user_no, vol_no, content)
+values (4, ?, 1, '수해피해 복구를 위한 사랑의 밥차, 팔근육 단련에 최고!'); 
+
+
+UPDATE ftp_vol_board SET co = 'x' WHERE column_2 = 'aa';
