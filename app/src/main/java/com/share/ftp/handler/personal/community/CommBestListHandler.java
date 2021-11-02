@@ -1,17 +1,16 @@
 package com.share.ftp.handler.personal.community;
 
-import java.util.List;
-import com.share.ftp.domain.personal.CommBoardDTO;
+import com.share.ftp.dao.CommunityDao;
 import com.share.ftp.handler.Command;
 import com.share.ftp.handler.CommandRequest;
-import com.share.util.Prompt;
 
 public class CommBestListHandler implements Command {
 
-  List<CommBoardDTO> commBoardDTOList;    
+  CommunityDao communityDao;
 
-  public CommBestListHandler (List<CommBoardDTO> commBoardDTOList) {
-    this.commBoardDTOList = commBoardDTOList;
+  public CommBestListHandler(CommunityDao communityDao) {
+    this.communityDao =  communityDao;
+
   }
 
   @Override
@@ -20,7 +19,7 @@ public class CommBestListHandler implements Command {
     System.out.println();
     System.out.println("[  나눔이야기 BEST 목록  ]");
 
-    Prompt.printBestRank(commBoardDTOList);
+    // Prompt.printBestRank(commBoardDTOList);
 
   }
 }

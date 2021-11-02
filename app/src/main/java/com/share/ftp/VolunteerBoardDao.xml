@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.share.ftp.dao.VolBoardDao">
+  
+  <resultMap type="VolBoardDTO" id="VolBoardDTOMap">
+    <id column="vol_board_no" property="no"/> 
+    <result column="title" property="title"/>
+    <result column="content" property="content"/>
+    <result column="created_dt" property="registeredDate"/>
+    <result column="view_cnt" property="viewCount"/>
+      <!-- <result column="vol_board_file_no" property="fileUpload"/>
+           <result column="like" property="viewCount"/>--> 
+
+    <association property="owner" javaType="joinDTO">
+      <id column="userNo" property="no"/>
+      <result column="userId" property="id"/>
+    </association>
+  </resultMap>
+<!--    
+  <insert id="insert" parameterType="VolBoardDTO">
+    insert into ftp_vol_board(title,content,created_dt) 
+    values(#{title},#{content}, curdate())
+  </insert>
+  -->
+  
+  <select id="findAll" resultMap="VolBoardDTOMap">
+    select 
+      b.vol_board_no,
+      u.id,
+      b.title,
+      b.created_dt,
+      b.view_cnt,
+      f.filepath
+    from
+     ftp_vol_board b
+     inner join ftp_vol_board_file f on b.vol_board_no=f.vol_board_no
+     inner join ftp_user u on b.user_no=u.user_no
+    order by 
+      b.vol_board_no desc
+  </select>
+   
+  <select id="findByKeyword" resultMap="VolBoardDTOMap" parameterType="string">
+   
+    select 
+      b.vol_board_no,
+      u.id,
+      b.title,
+      b.created_dt,
+      b.view_cnt,
+      f.filepath
+    from
+      ftp_vol_board b
+      inner join ftp_vol_board_file f on b.vol_board_no=f.vol_board_no
+      inner join ftp_user u on b.user_no=u.user_no
+      
+     <where>
+      <if test="title != null">
+         title like concat('%', #{value}, '%')
+      </if>
+      <if test="content != null">
+         or content like concat('%', #{value}, '%') 
+      </if>
+     </where>
+    order by 
+      b.vol_board_no desc
+  </select>
+
+  <select id="findNo" resultMap="VolBoardDTOMap" parameterType="int">
+    select 
+      b.vol_board_no,
+      u.id,
+      b.title,
+      b.created_dt,
+      b.view_cnt,
+      f.filepath
+    from
+      ftp_vol_board b
+      inner join ftp_vol_board_file f on b.vol_board_no=f.vol_board_no
+      inner join ftp_user u on b.user_no=u.user_no
+    where 
+      b.vol_board_no=#{values}
+  </select>
+  
+  <update id="updateCount" parameterType="int">
+    update ftp_vol_board set
+      view_cnt = view_cnt + 1
+    where vol_board_no=#{no}
+  </update>
+
+   <update id="update" parameterType="VolBoardDTO">
+   update ftp_vol_board set
+     title=#{title},
+     content=#{content}
+   where 
+      board_no=#{no}
+  </update>
+  
+   <delete id="delete" parameterType="int">
+    delete from ftp_vol_board where vol_board_no=${values}
+  </delete>
+    
+
+
+  
+</mapper>
+
+
+
+
+
+
+

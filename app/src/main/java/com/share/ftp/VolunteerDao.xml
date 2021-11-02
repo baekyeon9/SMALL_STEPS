@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.share.ftp.dao.VolunteerDao">
+  
+  <resultMap type="volunteerRequestDTO" id="VolunteerRequestDTOMap">
+    <id column="vol_no" property="no"/> 
+    <result column="user_no" property="userNo"/>
+    <result column="title" property="title"/>
+    <result column="content" property="content"/>
+    <result column="tel" property="tel"/>
+    <result column="email" property="email"/>
+    <result column="start_dt" property="startDate"/>
+    <result column="end_dt" property="endDate"/>
+    <result column="start_time" property="startTime"/>
+    <result column="end_time" property="endTime"/>
+    <result column="total_cnt" property="limitNum"/>
+    <result column="approval" property="status"/>
+    <result column="note" property="note"/> 
+   
+   <association property="owner" javaType="joinDTO">
+	   <id column="owner_no" property="no"/>
+	   <result column="owner_id" property="id"/>
+     <result column="owner_name" property="name"/>
+   </association>
+   
+   <association property="wish" javaType="joinDTO">
+     <id column="wish_no" property="no"/>
+     <result column="wish_id" property="id"/>
+     <result column="wish_name" property="name"/>
+   </association>
+   
+   <association property="category" javaType="category">
+     <id column="category_no" property="no"/>
+     <result column="category_title" property="title"/>
+   </association>
+   
+   <association property="fileUpload" javaType="volunteerAttachedFile">
+     <id column="vol_file_no" property="no"/>
+     <result column="filepath" property="fileUpload"/>
+   </association>
+   
+   <collection property="members" ofType="joinDTO">
+    <id column="user_no" property="no"/>
+    <result column="user_id" property="id"/>
+    <result column="user_name" property="name"/>
+   </collection>
+  </resultMap>
+
+ <!--  
+  
+  <resultMap type="category" id="CategoryMap">
+    <id column="category_no" property="no"/> 
+    <result column="category_title" property="title"/>
+  </resultMap>
+  
+  <resultMap type="Status" id="StatusMap">
+    <id column="category_no" property="no"/> 
+    <result column="category_title" property="title"/>
+  </resultMap>
+  -->
+  
+  
+  <insert id="insert" parameterType="VolunteerRequestDTO">
+    insert into ftp_vol(
+	    user_no,
+	    category_no,
+	    title,
+	    content,
+	    tel,
+	    email,
+	    start_dt,
+	    end_dt,
+	    start_time,
+	    end_time,
+	    total_cnt,
+	    approval)
+    values(
+	    #{userNo},
+	    #{category.no},
+	    #{title},
+	    #{content},
+	    #{tel},
+	    #{email},
+	    #{startDate},
+	    #{endDate},
+	    #{startTime},
+	    #{endTime},
+	    #{limitNum},
+	    #{status})
+  </insert>
+  
+ 
+  <select id="findAll" resultMap="VolunteerRequestDTOMap">
+	   select 
+       v.vol_no,  
+       v.title,
+       v.content,
+       v.tel,
+       v.email,
+       v.start_dt,
+       v.end_dt,
+       datediff(DATE_FORMAT(v.end_dt,"%Y-%m-%d"), DATE_FORMAT(v.start_dt,"%Y-%m-%d")),
+       timediff(v.end_time,v.start_time) timediff,
+       v.start_time,
+       v.end_time,
+       v.total_cnt,
+       u.id owner_id,  
+       c.category_title category
+     from
+       ftp_vol v
+       inner join ftp_user u on v.user_no=u.user_no
+       inner join ftp_category c on v.category_no=c.category_no
+       inner join 
+     order by
+       vol_no desc 
+  </select>
+ 
+   <update id="update" parameterType="PersonalDTO">
+	   update ftp_user set
+	     tel=#{tel},
+	     email=#{email},
+	     post_no=#{postNo},
+	     basic_address=#{basicAddress},
+	     detail_address=#{detailAddress},
+	     password=password(#{password})
+	   where 
+	      user_no=#{no}
+  </update>
+ <!--  
+ 
+  
+  
+
+   <update id="updatePersonal" parameterType="PersonalDTO">
+	   update ftp_user_personal set
+	     birthdate=#{birthdate}
+	   where 
+	      user_personal_no=#{personalNo}
+  </update>
+
+  
+  <select id="findByIdPassword" resultMap="PersonalDTOMap" parameterType="map">
+    select 
+       u.*,  
+       p.user_personal_no,  
+       p.birthdate,
+       p.rank,
+       p.point
+     from
+       ftp_user u
+       inner join ftp_user_personal p on u.user_no=p.user_no
+    where 
+      id=#{userId} and password=password(#{userPassword})
+  </select>
+  
+  
+   <update id="delete" parameterType="PersonalDTO">
+     update ftp_user set
+      id=#{id},
+      password=password(#{password}),
+      name=#{name},
+      tel=#{tel},
+      email=#{email},
+      post_no=#{postNo},
+      basic_address=#{basicAddress},
+      detail_address=#{detailAddress},
+      status=#{status},
+      type=#{type}
+     where 
+        user_no=#{no}
+  </update>
+  
+   <update id="deletePersonal" parameterType="PersonalDTO">
+      update ftp_user_personal set
+	      birthdate=#{birthdate},
+	      rank=#{level},
+	      point=#{point}
+      where 
+        user_personal_no=#{personalNo}
+  </update>
+  
+  
+  
+  -->
+  <!--  
+  
+  
+  
+  
+  <select id="findByNoticeNo" resultMap="NoticeDTOMap" parameterType="int">
+     select 
+     notice_no,
+     title,
+     content,
+     created_dt,
+     view_cnt
+    from
+     ftp_support_notice
+    where 
+      notice_no=#{values}
+  </select>
+  
+  
+  
+  <select id="findByKeyword" resultMap="NoticeDTOMap" parameterType="string">
+     select 
+       notice_no,
+       title,   
+       created_dt,
+       view_cnt
+    from
+     ftp_support_notice
+     <where>
+      <if test="title != null">
+         title like concat('%', #{value}, '%')
+      </if>
+      <if test="content != null">
+         or content like concat('%', #{value}, '%') 
+      </if>
+     </where>
+     order by notice_no desc
+  </select>
+  
+  
+
+ 
+ 
+  
+  <select id="findByEmailAndPassword" resultMap="MemberMap" parameterType="map">
+    select 
+      member_no,
+      name,
+      email,
+      photo,
+      tel,
+      created_dt 
+    from 
+      pms_member
+    where 
+      email=#{email} and password=password(#{password})
+  </select>
+  
+  <select id="findByName" resultMap="MemberMap" parameterType="string">
+    select 
+      member_no,
+      name,
+      email,
+      photo,
+      tel,
+      created_dt 
+    from 
+      pms_member
+    where 
+      name=#{value}
+  </select>
+  -->
+</mapper>
+
+
+
+
+
+
+

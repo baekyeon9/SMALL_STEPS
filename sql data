@@ -30,3 +30,49 @@ values (4, ?, 1, '수해피해 복구를 위한 사랑의 밥차, 팔근육 단�
 
 
 UPDATE ftp_vol_board SET co = 'x' WHERE column_2 = 'aa';
+
+
+
+"select "
+            + " b.board_no,"
+            + " b.title,"
+            + " b.created_dt,"
+            + " b.view_cnt,"
+            + " m.member_no,"
+            + " m.name,"
+            + " m.email"
+            + " from "
+            + " pms_board b"
+            + " inner join pms_member m on b.member_no=m.member_no"
+            + " order by b.board_no desc"
+
+-- 나눔이야기 목록 list
+
+select 
+     b.vol_board_no,
+     b.user_no,
+     b.title,
+     b.created_dt,
+     b.view_cnt,
+     f.filepath
+    from
+     ftp_vol_board b
+    inner join ftp_vol_board_file f on b.vol_board_no=f.vol_board_no
+    order by vol_board_no desc;
+
+
+       select 
+     vol_board_no,
+     user_no,
+     title,
+     created_dt,
+     view_cnt
+    from
+     ftp_vol_board
+    order by vol_board_no desc
+
+
+    update ftp_vol_board set
+      title="나눔이야기5",
+      content="내용5"
+    where vol_board_no="5";
