@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.share.ftp.dao.VolunteerBoardDao">
+  
+  <resultMap type="VolunteerBoardDTO" id="VolunteerBoardDTOMap">
+    <id column="vol_board_no" property="no"/> 
+    <result column="title" property="title"/>
+    <result column="content" property="content"/>
+    <result column="created_dt" property="registeredDate"/>
+    <result column="view_cnt" property="viewCount"/>
+    <result column="photo" property="photo"/> 
+
+
+    <association property="owner" javaType="joinDTO">
+      <id column="owner_no" property="no"/>
+      <result column="owner_Id" property="id"/>
+    </association>
+    
+       <association property="like" javaType="joinDTO">
+     <id column="like_no" property="no"/>
+     <result column="like_id" property="id"/>
+     <result column="like_name" property="name"/>
+   </association>
+    
+    <collection property="fileUpload" ofType="volunteerBoardAttachedFile">
+      <id column="vol_board_file_no" property="no"/>
+      <result column="filepath" property="filepath"/>
+    </collection>
+    
+  </resultMap>
+     
+  <insert id="insert" parameterType="VolunteerBoardDTO"
+   useGeneratedKeys="true" keyColumn="vol_board_no" keyProperty="no">
+        
+    insert into ftp_vol_board(
+      user_no,
+      title,
+      photo,
+      content)
+    values(
+      #{owner.no},    
+      #{title},
+      #{photo},
+      #{content})
+  </insert>
+  
+  <insert id="insertFile">
+    insert into ftp_vol_board_file(vol_board_no, filepath)
+      values(#{volBoardNo},#{filepath})
+  </insert>
+  
+  <select id="findAll" resultMap="VolunteerBoardDTOMap">
+    select 
+      b.vol_board_no,
+      b.title,
+      b.created_dt,
+      b.view_cnt,
+      b.photo,
+      f.filepath,
+      u.id owner_id
+    from
+     ftp_vol_board b
+     left outer join ftp_vol_board_file f on b.vol_board_no=f.vol_board_no
+     inner join ftp_user u on b.user_no=u.user_no
+    order by 
+      b.vol_board_no desc
+  </select>
+  
+   <select id="findDetail" resultMap="VolunteerBoardDTOMap" parameterType="int">
+    select 
+      b.vol_board_no,
+      b.title,
+      b.created_dt,
+      b.view_cnt,
+      b.photo,
+      f.filepath,
+      u.id owner_id,
+      count(l.user_no) likeCount
+    from
+     ftp_vol_board b
+     left outer join ftp_vol_board_file f on b.vol_board_no=f.vol_board_no
+     inner join ftp_user u on b.user_no=u.user_no
+     inner join ftp_vol_board_like l on b.vol_board_no=l.vol_board_no
+    where 
+     b.vol_board_no=#{values}
+  </select>
+  
+  <select id="findByLike" resultType="int" parameterType="int">
+    select 
+     count(c.user_no) 
+    from 
+     ftp_vol_board_like c
+     inner join ftp_vol_board b on c.vol_board_no=b.vol_board_no
+    where 
+     b.vol_board_no=#{values}
+  </select>
+  
+   
+  <select id="findByKeyword" resultMap="VolunteerBoardDTOMap" parameterType="string">
+      
+    select 
+      b.vol_board_no,
+      b.title,
+      b.content,
+      b.created_dt,
+      b.view_cnt,
+      f.filepath,
+      u.id owner_id
+    from
+     ftp_vol_board b
+     left outer join ftp_vol_board_file f on b.vol_board_no=f.vol_board_no
+     inner join ftp_user u on b.user_no=u.user_no
+           
+     <where>
+      <if test="title != null">
+         title like concat('%', #{value}, '%')
+      </if>
+      <if test="content != null">
+         or content like concat('%', #{value}, '%') 
+      </if>
+      <if test="id != null">
+         or id like concat('%', #{value}, '%') 
+      </if>
+     </where>
+    order by 
+      b.vol_board_no desc
+  </select>
+
+  <select id="findByNo" resultMap="VolunteerBoardDTOMap" parameterType="int">
+    select 
+      b.vol_board_no,
+      b.title,
+      b.content,
+      b.created_dt,
+      b.view_cnt,
+      b.photo,
+      f.filepath,
+      u.id owner_id
+    from
+     ftp_vol_board b
+     left outer join ftp_vol_board_file f on b.vol_board_no=f.vol_board_no
+     inner join ftp_user u on b.user_no=u.user_no
+    where 
+      b.vol_board_no=#{no}
+  </select>
+  
+  <update id="updateCount" parameterType="int">
+    update ftp_vol_board set
+      view_cnt = view_cnt + 1
+    where 
+      vol_board_no=#{no}
+  </update>
+
+   <update id="update" parameterType="volunteerBoardDTO">
+   update ftp_vol_board set
+     title=#{title},
+     photo=#{photo},
+     content=#{content}
+   where 
+      vol_board_no=#{no}
+  </update>
+  
+  <delete id="deleteFile" parameterType="volunteerBoardDTO">
+       delete from ftp_vol_board_file where vol_board_no=#{no}
+  </delete>
+  
+   <delete id="delete" parameterType="volunteerBoardDTO">
+    delete from ftp_vol_board where vol_board_no=${values}
+  </delete>
+  
+    <delete id="deleteComment" parameterType="int">
+    delete from ftp_vol_comment where vol_board_no=${values}
+  </delete>
+  
+  <delete id="deleteLike" parameterType="int">
+    delete from ftp_vol_board_like where user_no=${param1} and vol_board_no=#{param2}
+  </delete>
+  
+  
+    
+   <insert id="addLike">
+    insert into ftp_vol_board_like(user_no,vol_board_no)
+    values(#{userNo},#{volBoardNo})
+  </insert>
+
+  
+</mapper>
+
+
+
+
+
+
+

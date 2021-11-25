@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+	  <title>HappyShare : 후원하기</title>
+	  
+	  <!--  link -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/maicons.css">
+    <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
+    <link rel="stylesheet" href="../assets/vendor/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="../assets/vendor/fancybox/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+	</head>
+	
+  <body>
+    <header>
+      <div class="top-bar">
+        <div class="container">
+          <div class="row align-items-center">          
+            <div class="col-md-12 text-right d-none d-md-block">
+              <div class="social-mini-button">
+                <a href="#"><span>로그인</span></a>
+                <a href="#"><span>회원가입</span></a>
+                <a href="#"><span>관리자</span></a>
+              </div>
+            </div>
+          </div>
+          <!-- //row -->
+        </div>
+      </div>
+      <!-- //top-bar -->
+      
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a href="index.html" class="navbar-brand">Happy<span class="text-primary logo">Share</span></a>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- navbarContent -->
+          
+          <div class="navbar-collapse collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">함께해요</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link">소통해요</a>
+              </li>
+              <li class="nav-item">
+                <a href="services.html" class="nav-link">챌린지</a>
+              </li>
+              <li class="nav-item">
+                <a href="portfolio.html" class="nav-link">모금함</a>
+              </li>
+              <li class="nav-item">
+                <a href="blog.html" class="nav-link">고객센터</a>
+              </li>
+            </ul>
+          </div>
+          <!-- //navbarContent -->
+        </div>
+        <!-- container -->
+      </nav>
+      <!-- //navbar -->
+    </header>
+    	
+    <main>
+      <div class="page-section">
+				<div class="container">
+					<h1 class="title-h">후원하기</h1>
+				  <div class="join-wrap">
+            <div id="msform">
+						  <!-- progressbar -->
+						  <ul class="steps">
+						    <li class="active">1.후원자 정보 입력</li>
+						    <li>2.후원금액 입력</li>
+						    <li>3.결제하기</li>
+						  </ul>
+						  <!-- //progressbar -->
+						  <form name="form-wrapper">
+							  <!-- fieldsets -->
+							  <fieldset class="do-section">
+							    <h1 class="fs-title">1. 후원자 정보</h1>
+							    <input id="f-name" class="form-control box-input" type="text" name="name" placeholder="이름">
+							    <div class="jumin">
+								    <input id="f-registerationNumber" class="numberJumin" type="number" name="registerationNumber" placeholder="주민등록번호 앞자리">
+								    <span>-</span>
+								    <input id="f-backRegisterationNumber" class="numberJumin" type="password" name="registerationNumber" placeholder="주민등록번호 뒷자리">
+								   </div>
+							    <input id="f-tel" class="form-control box-input" type="tel" name="tel" placeholder="휴대폰번호">
+							    <input id="f-email" class="form-control box-input" type="email" name="email" placeholder="이메일주소">
+							    <input type="button" name="next" class="button action-button" value="다음" />
+							  </fieldset>
+							  <fieldset class="do-section">
+							    <h2 class="fs-title">2. 후원금액</h2>
+							    <div class="form-box-do">
+								    <label for="man" class="container-radio" style="padding-right:9px;">10,000원
+										  <input type="radio" id="man" name="radio"  checked>
+										  <span class="checkmark"></span>
+										</label>
+										<label class="container-radio" style="padding-right:9px;">30,000원
+										  <input type="radio" id="sam" name="radio">
+										  <span class="checkmark"></span>
+										</label>
+										<label class="container-radio" style="padding-right:9px;">50,000원
+										  <input type="radio" id="oh" name="radio">
+										  <span class="checkmark"></span>
+										</label>
+										<label class="container-radio" style="padding-right:9px;">100,000원
+										  <input type="radio" id="sib" name="radio">
+										  <span class="checkmark"></span>
+										</label>
+									</div>
+							    <input type="button" name="next" class="next action-button" value="다음" />
+							  </fieldset>
+							  <fieldset class="do-section">
+							    <h2 class="fs-title">3. 결제하기</h2>
+							    <div class="form-box-do">
+								    <label for="f-payType" class="container-radio" style="padding-right:9px;">카드결제
+	                    <input type="radio" id="f-payType" name="payType"  checked>
+	                    <span class="checkmark"></span>
+	                  </label>
+	                 </div>
+							    <input type="button" name="next" class="next action-button" value="결제하기" />
+							  </fieldset>
+							 </form>
+						</div>
+						<!-- //msform -->
+              
+          </div>
+          <!-- //join-wrap -->
+				</div>
+        <!-- //container -->
+			</div>
+		</main> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" type="text/javascript"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="../assets/vendor/wow/wow.min.js"></script>
+    <script src="../assets/vendor/fancybox/js/jquery.fancybox.min.js"></script>
+    <script src="../assets/vendor/isotope/isotope.pkgd.min.js"></script>
+    <script src="../assets/js/google-maps.js"></script>
+    <script src="../assets/js/theme.js"></script> -->
+		<script>
+
+		$(".next").click(function(){
+			  if(animating) return false;
+			  animating = true;
+			  
+			  current_fs = $(this).parent();
+			  next_fs = $(this).parent().next();
+			  
+			  //activate next step on progressbar using the index of next_fs
+			  $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+			  
+			  //show the next fieldset
+			  next_fs.show(); 
+			  //hide the current fieldset with style
+			  current_fs.animate({opacity: 0}, {
+			    step: function(now, mx) {
+			      //as the opacity of current_fs reduces to 0 - stored in "now"
+			      //1. scale current_fs down to 80%
+			      scale = 1 - (1 - now) * 0.2;
+			      //2. bring next_fs from the right(50%)
+			      left = (now * 50)+"%";
+			      //3. increase opacity of next_fs to 1 as it moves in
+			      opacity = 1 - now;
+			      current_fs.css({
+			        'transform': 'scale('+scale+')',
+			        'position': 'absolute'
+			      });
+			      next_fs.css({'left': left, 'opacity': opacity});
+			    }, 
+			    duration: 800, 
+			    complete: function(){
+			      current_fs.hide();
+			      animating = false;
+			    }, 
+			    //this comes from the custom easing plugin
+			    easing: 'easeInOutBack'
+			  });
+			});
+		</script>
+		
+	</body>
+</html>
+    

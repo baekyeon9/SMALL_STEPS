@@ -1,0 +1,143 @@
+<!DOCTYPE>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+	<title>관리자 : 봉사 상세</title>
+	
+	<!-- link -->
+	<link rel="stylesheet" href="../assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/maicons.css">
+  <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
+  <link rel="stylesheet" href="../assets/vendor/owl-carousel/css/owl.carousel.css">
+  <link rel="stylesheet" href="../assets/vendor/fancybox/css/jquery.fancybox.css">
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body>
+	<div id="wrap">
+		<div class="head">
+		  <div class="container">
+		    <div class="header">
+					<h6 class="navbar-brand">Happy<b class="text-primary logo">Share</b></h6>
+					<div class="btn-logoout">
+						<button type="button" class="btn btn-primary btn-sm btn-logo">로그아웃</button>
+					</div>
+				</div>
+		  </div>
+		</div>
+		<!-- //head -->
+		
+		<div class="menu">
+			<ul>
+				<li><a href="#">회원정보조회</a></li>
+				<li><a href="#" class="on">봉사활동관리</a></li>
+        <li><a href="#">모금함관리</a></li>
+				<li><a href="#">공지사항관리</a></li>
+				<li><a href="#">문의사항관리</a></li>
+				<li><a href="#">챌린지사항관리</a></li>
+			</ul>
+		</div>
+		<!-- //menu -->
+		
+		<div class="ad-main">
+      <div class="ad-main-infor">
+        <div class="write-wrap">
+          <h4 class="mb-5">봉사 상세</h4>
+          <form action"#">
+            <div class="form-group">
+              <label for='v-no'>번호</label> 
+              <input id='v-no' class="form-control" type='text' name='no' value='${volunteer.no}' readonly>
+            </div>
+            <div class="form-group">
+              <label for='v-title'>제목</label> 
+              <input id='v-title' class="form-control" type='text' name='title' value='${volunteer.title}' >
+            </div>
+            <div class="form-group">
+              <label for='v-owner'>주최자</label> 
+              <input id='v-owner' class="form-control" type='text' name='owner' value='${volunteer.owner.id}' readonly>
+            </div>
+            <div class="form-group">
+              <label for='v-category'>카테고리</label> 
+              <input id='v-category' class="form-control" type='text' name='category' value='${volunteer.category.title}' >
+            </div>
+            <div class="form-group">
+              <label for='v-tel'>전화번호</label> 
+              <input id='v-tel' class="form-control" type='tel' name='tel' value='${volunteer.tel}' >
+            </div>
+            <div class="form-group">
+              <label for='v-email'>이메일</label>
+              <input id='v-email' class="form-control" type='email' name='email' value='${volunteer.email}' readonly>
+            </div>
+            <div class="form-group">
+              <label for='v-startdate'>시작일</label> 
+              <input id='v-startdate' class="form-control" type='text' name='startDate' value='${volunteer.startDate}'>
+            </div>
+            <div class="form-group">
+              <label for='v-enddate'>종료일</label> 
+              <input id='v-enddate' class="form-control" type='text' name='endDate' value='${volunteer.endDate}'>
+            </div>
+            <div class="form-group">
+              <label for='v-starttime'>시작시간</label> 
+              <input id='v-starttime' class="form-control" type='text' name='startTime' value='${volunteer.startTime}'>
+            </div>
+            <div class="form-group">
+              <label for='v-endtime'>종료시간</label> 
+              <input id='v-endtime' class="form-control" type='text' name='endTime' value='${volunteer.endTime}'>
+            </div>
+            <div class="form-group">
+              <label for='v-totaldate'>총일수</label> 
+              <input id='v-totaldate' class="form-control" type='text' name='totalDate' value='${volunteerDate.totalDate}일' readonly><br>
+            </div>
+            <div class="form-group">
+              <label for='v-remaindate'>남은기간</label> 
+              <input id='v-remaindate' class="form-control" type='text' name='remainDate' value='${volunteerDate.remainDate}일' readonly><br>
+            </div>
+            <div class="form-group">
+              <label for='v-currentnum'>현재인원</label> 
+              <input id='v-currentnum' class="form-control" type='text' name='currentNum' value='${volunteer.currentNum}명' readonly><br>
+            </div>
+            <div class="form-group">
+              <label for='v-limitnum'>총인원</label> 
+              <input id='v-limitnum' class="form-control" type='text' name='limitNum' value='${volunteer.limitNum}명'><br>
+            </div>
+            <div class="form-group">
+              <label for='v-content'>내용</label> 
+              <input id='v-content' class="form-control" type='text' name='content' value='${volunteer.content}'>
+            </div>
+            <div class="form-group row">
+					    <label for="f-file" class="col-sm-1 col-form-label">파일첨부</label>
+					    <div class="col-sm-11">
+                <input type="file" class="form-control-file" id="f-file" name='fileUpload' value=''>
+					    </div>
+					    <label for="f-file" class="col-sm-1 col-form-label">파일첨부</label>
+              <div class="col-sm-11">
+                <input type="file" class="form-control-file" id="f-file" name='fileUpload' value=''>
+              </div>
+              <label for="f-file" class="col-sm-1 col-form-label">파일첨부</label>
+              <div class="col-sm-11">
+                <input type="file" class="form-control-file" id="f-file" name='fileUpload' value=''>
+              </div>
+					  </div>
+					  <!-- //파일첨부 -->
+					  <div class="form-group">
+              <a href="" class="btn btn-primary">수정</a>
+              <a href="#" class="btn btn-primary">삭제</a>
+              <a href="adminNotice.html" class="btn btn-primary">목록</a>
+            </div>
+            <!-- //ad-btn -->
+          </form>
+				</div>
+				<!-- //write-wrap -->
+			</div>
+			<!-- //form -->
+		</div>
+		<!-- //ad-main -->
+		
+	</div>
+	<!-- //wrap -->
+</body>
+</html>
+ 
+
+

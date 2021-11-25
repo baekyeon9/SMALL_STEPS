@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.share.ftp.dao.VolunteerBoardCommentDao">
+  
+  <resultMap type="VolunteerBoardCommentDTO" id="VolunteerBoardCommentDTOMap">
+    <id column="vol_comment_no" property="no"/> 
+    <result column="vol_board_no" property="volBoardNo"/> 
+    <result column="content" property="commentContent"/>
+    <result column="created_dt" property="registeredDate"/>
+
+    <association property="owner" javaType="joinDTO">
+      <id column="owner_no" property="no"/>
+      <result column="owner_id" property="id"/>
+    </association>
+    
+  <!-- <association property="volNo" javaType="VolunteerRequestDTO">
+      <id column="vol_no" property="no"/>
+    </association> -->  
+    
+  </resultMap>
+     
+ <insert id="insert" parameterType="VolunteerBoardCommentDTO"
+   useGeneratedKeys="true" keyColumn="vol_comment_no" keyProperty="no">
+    insert into ftp_vol_comment(
+      vol_board_no,
+      user_no,
+      content)
+    values(
+      #{volBoardNo},    
+      #{owner.no},    
+      #{commentContent})
+  </insert> 
+  
+  <select id="findAll" resultMap="VolunteerBoardCommentDTOMap">
+    select 
+      c.vol_board_no,
+      c.vol_comment_no,
+      c.content,
+      c.created_dt,
+      u.id owner_id,
+      u.user_no 
+    from
+     ftp_vol_comment c
+     inner join ftp_user u on c.user_no=u.user_no
+    order by 
+      c.vol_comment_no desc
+  </select>
+  
+    <select id="findAllNo" resultMap="VolunteerBoardCommentDTOMap">
+    select 
+      c.vol_board_no,
+      c.vol_comment_no,
+      c.content,
+      c.created_dt,
+      u.id owner_id,
+      u.user_no 
+    from
+     ftp_vol_comment c
+     inner join ftp_user u on c.user_no=u.user_no
+    where 
+     c.vol_board_no=#{volBoardNo}
+    order by 
+      c.vol_comment_no desc
+  </select>
+    
+  <select id="findByKeyword" resultMap="VolunteerBoardCommentDTOMap" parameterType="string">
+     select 
+      c.vol_board_no,
+      c.vol_comment_no,
+      c.content,
+      c.created_dt,
+      u.id owner_id,
+     from
+      ftp_vol_comment c
+      inner join ftp_user u on c.user_no=u.user_no
+     <!--    
+      where 
+        s.content like(concat('%',#{keyword},"%"))
+        or u.id like(concat('%',#{keyword},"%"))  -->   
+     
+    <where>
+      <if test="content != null">
+         or content like concat('%', #{value}, '%') 
+      </if>
+            <if test="id != null">
+         or id like concat('%', #{value}, '%') 
+      </if>
+    </where>
+    order by 
+      c.vol_comment_no desc
+  </select>
+
+  <select id="findByCommentNo" resultMap="VolunteerBoardCommentDTOMap">
+   select 
+      c.vol_board_no,
+      c.vol_comment_no,
+      c.content,
+      c.created_dt,
+      u.id owner_id,
+      u.user_no 
+    from
+      ftp_vol_comment c
+      inner join ftp_user u on c.user_no=u.user_no
+    where 
+      vol_board_no=#{volBoardNo} and vol_comment_no=#{commentNo}
+  </select>
+  
+  <update id="update" parameterType="VolunteerBoardCommentDTO">
+   update ftp_vol_comment set
+     content=#{commentContent}
+   where 
+     vol_comment_no=#{no}
+  </update>
+  
+  <delete id="delete" parameterType="VolunteerBoardCommentDTO">
+    delete from ftp_vol_comment where vol_comment_no=${values}
+  </delete>
+   
+   <select id="findByNo" resultMap="VolunteerBoardCommentDTOMap"  parameterType="int">
+     select 
+      c.vol_board_no,
+      c.vol_comment_no,
+      c.content,
+      c.created_dt,
+      u.id owner_id,
+      u.user_no 
+    from
+      ftp_vol_comment c
+      inner join ftp_user u on c.user_no=u.user_no
+    where 
+      c.vol_comment_no=#{commentNo}
+ </select>
+</mapper>
+
+
+
+
+
+
+

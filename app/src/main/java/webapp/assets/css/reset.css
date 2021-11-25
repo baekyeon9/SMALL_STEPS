@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/* 여백 초기화 */
+body, div, dl, dt, dd, ul, li, ol, h1, h2, h3, h4, h5, h6, from, input, legend, textarea, select,
+fieldset, p, button {margin:0; padding:0;}
+
+/* a 링크 초기화 */
+a {color:#2f3743; text-decoration:none;}
+a:hover {color:#390;}
+
+/* 폰트 초기화 */
+body, input, textarea, select, button, table {font-family:"나눔 고딕", "Namun Gothic", "맑은고딕", "Malgun Gothic", 돋움, Dotum, helvetica, sans-serif; font-size:12px; line-height:1.7;}
+
+/* 블릿 기호 초기화 */
+ul, li, ol {list-style:none;}
+
+/* IR 기법 */
+.ir, caption {width:0; height:0; text-indent:-9999px; position:absolute; left:0; top:0; overflow:hidden; font-size:0; line-height:0;}
+
+/* 테두리 초기 */
+img, fieldset {border:0;}
+
+/* 기울기 초기화 */
+em, address {font-style:normal;}
+
+/* table 초기화 */
+table {border-collapse:collapse; }
+
+/* input */
+input[type='text'], input[type='password'] {padding:0 5px; outline:none; color:#2e3235; border:1px solid #b0b0b0; height:28px; line-height:28px; width:95px;}
+input[type='radio'] {vertical-align:middle; margin-top:1px; width:18px; height:18px;}
+input[type='submit'] {font-weight:bold; font-size:13px; letter-spacing:-1px; width:93px; height:27px; color:#1b1919;}
+input[type='checkbox'] {vertical-align:middle;  width:13px; height:13px;}

@@ -1,0 +1,122 @@
+<!DOCTYPE>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+	<title>관리자 : 회원상세</title>
+	
+	<!-- link -->
+	<link rel="stylesheet" href="../assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/maicons.css">
+  <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
+  <link rel="stylesheet" href="../assets/vendor/owl-carousel/css/owl.carousel.css">
+  <link rel="stylesheet" href="../assets/vendor/fancybox/css/jquery.fancybox.css">
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body>
+	<div id="wrap">
+		<div class="head">
+		  <div class="container">
+		    <div class="header">
+					<h6 class="navbar-brand">Happy<b class="text-primary logo">Share</b></h6>
+					<div class="btn-logoout">
+						<button type="button" class="btn btn-primary btn-sm btn-logo">로그아웃</button>
+					</div>
+				</div>
+		  </div>
+		</div>
+		<!-- //head -->
+		
+		<div class="menu">
+			<ul>
+				<li><a href="#" class="on">회원정보조회</a></li>
+				<li><a href="#">봉사활동관리</a></li>
+        <li><a href="#">모금함활동관리</a></li>
+				<li><a href="#">공지사항관리</a></li>
+				<li><a href="#">문의사항관리</a></li>
+				<li><a href="#">챌린지사항관리</a></li>
+			</ul>
+		</div>
+		<!-- //menu -->
+		
+		<div class="ad-main">
+      <div class="ad-main-infor">
+        <div class="write-wrap">
+          <h4 class="mb-5">회원 상세</h4>
+          <form action"#">
+            <div class="form-group">
+              <label for='f-no'>번호</label> 
+              <input id='f-no' class="form-control col-sm-1" type='number' name='no' value='${personalDTO.no}' readonly>
+            </div>
+            <div class="form-group">
+              <label for='f-id'>아이디</label> 
+              <input id='f-id' class="form-control" type='text' name='id' value='${personalDTO.id}' readonly>
+            </div>  
+            <div class="form-group">
+              <label for='f-password'>암호</label> 
+              <input id='f-password' class="form-control" type='password' name='password'>
+            </div>
+            <div class="form-group">
+              <label for='f-name'>이름</label> 
+              <input id='f-name' class="form-control" type='text' name='name' value='${personalDTO.name}'>
+            </div>
+            <div class="form-group">  
+              <label for='f-tel'>전화</label> 
+              <input id='f-tel' class="form-control" type='tel' name='tel' value='${personalDTO.tel}'><br>
+            </div>
+            <div class="form-group">
+              <label for='f-email'>이메일</label> 
+              <input id='f-email' class="form-control" type='email' name='email' value='${personalDTO.email}'><br>
+            </div>
+            <div class="form-group">
+              <label for='f-postNo'>우편번호</label> 
+              <input id='f-postNo' class="form-control" type="number" name='postNo' value='${personalDTO.postNo}'><br>
+            </div>
+            <div class="form-group">
+              <label for='f-basicAddress'>기본주소</label> 
+              <input id='f-basicAddress' class="form-control" type='text' name='basicAddress' value='${personalDTO.basicAddress}'><br>
+            </div>
+            <div class="form-group">
+              <label for='f-detailAddress'>상세주소</label> 
+              <input id='f-detailAddress' class="form-control" type='text' name='detailAddress' value='${personalDTO.detailAddress}'><br>
+            </div>
+            <div class="form-group">
+              <label for='f-birthdate'>생년월일</label> 
+              <input id='f-birthdate' class="form-control" type="date" name='birthdate' value='${personalDTO.birthdate}'><br>
+            </div>
+            <div class="form-group">
+              <label for='f-level'>회원유형</label> 
+              <input id='f-level' class="form-control" type='text' name='level' value='${personalDTO.level}' readonly><br>
+            </div>
+            <div class="form-group">
+              <label for='f-status'>승인여부</label> 
+              <input id='f-status' class="form-control" type="text" name='status' value='${personalDTO.status}' readonly><br>
+            </div>
+            <div class="form-group">
+              <label for='f-registerDate'>등록일</label> 
+              <span id='f-registerDate' class="form-control" readonly>${personalDTO.registerDate}</span><br>
+            </div>  
+					  
+					  <div class="form-group">
+              <a href="" class="btn btn-primary">승인하기</a>
+              <a href="#" class="btn btn-primary">반려하기</a>
+              <a href="#" class="btn btn-primary">탈퇴</a>
+              <a href="adminNotice.html" class="btn btn-primary">목록</a>
+            </div>
+            <!-- //ad-btn -->
+          </form>
+				</div>
+				<!-- //write-wrap -->
+			</div>
+			<!-- //form -->
+		</div>
+		<!-- //ad-main -->
+		
+	</div>
+	<!-- //wrap -->
+</body>
+</html>
+ 
+
+

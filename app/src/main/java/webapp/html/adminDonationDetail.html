@@ -1,0 +1,109 @@
+<!DOCTYPE>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+	<title>관리자 : 모금함상세</title>
+	
+	<!-- link -->
+	<link rel="stylesheet" href="../assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/maicons.css">
+  <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
+  <link rel="stylesheet" href="../assets/vendor/owl-carousel/css/owl.carousel.css">
+  <link rel="stylesheet" href="../assets/vendor/fancybox/css/jquery.fancybox.css">
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body>
+	<div id="wrap">
+		<div class="head">
+		  <div class="container">
+		    <div class="header">
+					<h6 class="navbar-brand">Happy<b class="text-primary logo">Share</b></h6>
+					<div class="btn-logoout">
+						<button type="button" class="btn btn-primary btn-sm btn-logo">로그아웃</button>
+					</div>
+				</div>
+		  </div>
+		</div>
+		<!-- //head -->
+		
+		<div class="menu">
+			<ul>
+				<li><a href="#">회원정보조회</a></li>
+				<li><a href="#">봉사활동관리</a></li>
+        <li><a href="#" class="on">모금함활동관리</a></li>
+				<li><a href="#">공지사항관리</a></li>
+				<li><a href="#">문의사항관리</a></li>
+				<li><a href="#">챌린지사항관리</a></li>
+			</ul>
+		</div>
+		<!-- //menu -->
+		
+		<div class="ad-main">
+      <div class="ad-main-infor">
+        <div class="write-wrap">
+          <h4 class="mb-5">모금함 상세</h4>
+          <form action"#">
+            <div class="form-group">
+              <label for='f-no'>개설번호</label> 
+              <input id='f-no' class="form-control" type='text' name='no' value='${donationBoardDTO.no}' readonly>
+            </div>
+            <div class="form-group">
+              <label for='f-category'>개설분류</label> 
+              <input id='f-category' class="form-control" type="text" name='category' value='${donationBoardDTO.category.title}'>
+            </div>  
+            <div class="form-group">
+              <label for='f-leader'>주최자</label> 
+              <input id='f-leader' class="form-control" type="text" name='leader' value='${donationBoardDTO.leader.name}'>
+            </div>
+            <div class="form-group">
+              <label for='f-title'>제목</label> 
+              <input id='f-title' class="form-control" type='text' name='title' value='${donationBoardDTO.title}'>
+            </div>
+            <div class="form-group">
+              <label for='f-content'>내용</label> 
+              <input id='f-content' class="form-control" type='text' name='content' value='${donationBoardDTO.content}'>
+            </div>
+            <div class="form-group">
+              <label for='f-file'>첨부파일</label> 
+              <input id='f-file' class="form-control" type="file" name='fileUpload' value='${donationBoardDTO.fileNames}'>
+            </div>
+            <div class="form-group">
+              <label for='f-startDate'>시작일</label> 
+              <input id='f-startDate' class="form-control" type="date" name='startDate' value='${donationBoardDTO.startDate}'>
+            </div>
+            <div class="form-group">
+              <label for='f-endDate'>종료일</label> 
+              <input id='f-endDate' class="form-control" type="date" name='endDate' value='${donationBoardDTO.endDate}'>
+            </div>
+            <div class="form-group">
+              <label for='f-taget'>목표금액</label> 
+              <input id='f-taget' class="form-control" type="number" name='moneyTarget' value='${donationBoardDTO.moneyTarget}'>
+					  </div>
+            <div class="form-group">
+              <label for='f-registerDate'>등록일</label> 
+              <span id='f-registerDate' class="form-control" readonly>${donationBoardDTO.registerDate}</span>
+              <br>
+            </div>
+					  <div class="form-group">
+              <a href="" class="btn btn-primary">승인하기</a>
+              <a href="#" class="btn btn-primary">반려하기</a>
+              <a href="adminNotice.html" class="btn btn-primary">목록</a>
+            </div>
+            <!-- //ad-btn -->
+          </form>
+				</div>
+				<!-- //write-wrap -->
+			</div>
+			<!-- //form -->
+		</div>
+		<!-- //ad-main -->
+		
+	</div>
+	<!-- //wrap -->
+</body>
+</html>
+ 
+
+

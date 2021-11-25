@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="copyright" content="MACode ID, https://macodeid.com/"> -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="copyright" content="MACode ID, https://macodeid.com/">
+
+  <title>함께해요 : 봉사신청서</title>
+
+  <style>
+    *{margin: 0;padding: 0;box-sizing: border-box}
+    body{background-color: #f7f7f7;}
+    ul>li{list-style: none}
+    a{text-decoration: none;}
+    .clearfix::after{content: "";display: block;clear: both;}
+
+     #joinForm{width: 480px;margin: 100px auto;}
+    ul.join_box{border: 1px solid #ddd;background-color: #fff;}
+    .checkBox,.checkBox>ul{position: relative;}
+    .checkBox>ul>li{float: left;}
+    .checkBox>ul>li:first-child{width: 85%;padding: 15px; font-weight: 600; color: #888;}
+    .checkBox>ul>li:nth-child(2){position: absolute;top: 50%; right: 30px;margin-top: -12px;}
+    .checkBox textarea{width: 96%;height: 90px; margin: 0 2%; background-color: #f7f7f7;color: #888; border: none;}
+    .footBtwrap{margin-top: 20px;}
+    .footBtwrap>li{float: left;width: 50%;height: 60px;}
+    .footBtwrap>li>button{display: block; width: 100%;height: 100%; font-size: 20px; text-align: center; line-height: 60px;}
+    .fpmgBt1{background-color: #fff; color:#888}
+    .fpmgBt2{background-color: lightsalmon; color: #fff}
+  </style>
+
+    <!-- link -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/maicons.css">
+    <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
+    <link rel="stylesheet" href="../assets/vendor/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="../assets/vendor/fancybox/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+  <!-- Back to top button -->
+  <div class="back-to-top"></div>
+
+
+  <!-- header -->
+  <header>
+    <div class="top-bar">
+      <div class="container">
+        <div class="row align-items-center">          
+          <div class="col-md-12 text-right d-none d-md-block">
+            <div class="social-mini-button">
+              <a href="#"><span>로그인</span></a>
+              <a href="#"><span>회원가입</span></a>
+               <a href="#"><span>관리자</span></a>
+            </div>
+          </div>
+        </div>
+        <!-- //row -->
+      </div>
+    </div>
+    <!-- //top-bar -->
+
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">Happy<span class="text-primary logo">Share</span></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- navbarContent -->
+        <div class="navbar-collapse collapse" id="navbarContent">
+          <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
+            <li class="nav-item active">
+              <a href="#" class="nav-link">함께해요</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">소통해요</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">나눔이야기</a>
+                <a class="dropdown-item" href="#">한줄후기</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="services.html" class="nav-link">챌린지</a>
+            </li>
+            <li class="nav-item">
+              <a href="portfolio.html" class="nav-link">모금함</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">고객센터</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item " href="#">공지사항</a>
+                <a class="dropdown-item" href="#">공지사항</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- //navbarContent -->
+      </div>
+      <!-- //container -->
+    </nav>
+    <!-- //nav -->
+
+
+    <div class="page-banner bg-img bg-img-parallax overlay-dark" style="background-image: url(../assets/img/bg_image_3.jpg);">
+      <div class="container h-100">
+        <div class="row justify-content-center align-items-center h-100">
+          <div class="col-lg-8">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0">
+                <li class="breadcrumb-item"><a href="index.html" style="font-size:20px;">함께해요</a></li>
+                <li class="breadcrumb-item active" aria-current="page" style="font-size:22px;">봉사신청</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div> <!-- .page-banner -->
+  </header>
+
+<!---------------------------------------- main ---------------------------------------------->
+
+  <main>
+    <div class="page-section">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="title-section mb-3">봉사신청서 양식</h2>
+          <p>아래 양식에 맞게 작성해주세요 </p>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-8">
+
+            <form action="#" class="form-contact" method="post" enctype="multipart/form-data" name="form" >
+              <div class="row">
+                <div class="col-sm-12 py-2">
+                  <label for="title" class="fg-grey">제목</label>
+                  <input type="text" class="form-control" id="title" name="title" placeholder="제목을 입력해주세요..">
+                </div>
+               
+                <div class="col-sm-12 py-2" >
+                  <label for="category" class="fg-grey" style="margin-bottom: 20px;">카테고리</label><br>
+                  <select name="category" id="category">
+                    <option selected value="">선택하세요</option>
+                    <option value="untact">비대면</option>
+                    <option value="children">아동</option>
+                    <option value="teen">청소년</option>
+                    <option value="elder">노인</option>
+                    <option value="handicapped">장애인</option>
+                    <option value="animal">동물</option>
+                    <option value="environment">환경</option>
+                    <option value="other">기타</option>
+                </select>
+                </div>
+               
+                <div class="col-12 py-2">
+                  <label for="subject" class="fg-grey">전화번호</label>
+                  <input type="text" class="form-control" id="tel" name="tel" placeholder="전화번호를 입력해주세요..">
+                </div>
+                <div class="col-12 py-2">
+                  <label for="subject" class="fg-grey">이메일</label>
+                  <input type="email" class="form-control" id="email" placeholder="이메일을 입력해주세요..">
+                </div>
+                <div class="col-6 py-2">
+                  <label for="subject" class="fg-grey">시작일</label>
+                  <input type="date" class="form-control" id="startDate">
+                </div>
+                <div class="col-6 py-2">
+                  <label for="subject" class="fg-grey">종료일</label>
+                  <input type="date" class="form-control" id="endDate">
+                </div>
+                <div class="col-6 py-2">
+                  <label for="subject" class="fg-grey">시작시간</label>
+                  <input type="time" class="form-control" id="startTime">
+                </div>
+                <div class="col-6 py-2">
+                  <label for="subject" class="fg-grey">종료시간</label>
+                  <input type="time" class="form-control" id="endTime">
+                </div>
+                <div class="col-12 py-2">
+                  <label for="subject" class="fg-grey">총모집인원</label>
+                  <input type="number" class="form-control" id="limitNum" placeholder="인원">
+                </div>
+                
+
+                <div class="col-12 py-2">
+                  <label for="content" class="fg-grey">내용</label>
+                  <textarea id="content" rows="8" class="form-control" placeholder="내용을 입력해주세요.."></textarea>
+                </div>
+
+                <div class="col-12 py-2">
+                  <label for="subject" class="fg-grey">총모집인원</label>
+                  <input type="number" class="form-control" id="limitNum" placeholder="인원">
+                </div>
+                <div class="col-12 py-2">
+                  <label for="f-file" class="fg-grey">파일</label>
+                  <input type="file" class="form-control" id="f-file" placeholder="첨부파일">
+                </div>
+                <input type='hidden' value='2' name='status'><br>
+                <div class="col-12 mt-3">
+                  <button type="submit" class="btn btn-primary px-5" id="cancel">취소하기</button>
+                  <button type="submit" class="btn btn-primary px-5" id="apply">신청하기</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div> <!-- .container -->
+    </div> <!-- .page-section -->
+
+    
+   
+      
+    </div>
+  </main>
+
+ <!---------------------------------------- footer ---------------------------------------------->
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 py-3">
+          <h3>Reve<span class="fg-primary">Tive.</span></h3>
+        </div>
+        <div class="col-lg-3 py-3">
+          <h5>Contact Information</h5>
+          <p>301 The Greenhouse, Custard Factory, London, E2 8DY.</p>
+          <p>Email: example@mail.com</p>
+          <p>Phone: +00 112323980</p>
+        </div>
+        <div class="col-lg-3 py-3">
+          <h5>Company</h5>
+          <ul class="footer-menu">
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">News & Feed</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 py-3">
+          <h5>Newsletter</h5>
+          <form action="#">
+            <input type="text" class="form-control" placeholder="Enter your email">
+            <button type="submit" class="btn btn-primary btn-sm mt-2">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <p>Copyright 2020. This template designed by <a href="https://macodeid.com">MACode ID</a></p>
+        </div>
+        <div class="col-md-6 text-right">
+          <div class="sosmed-button">
+            <a href="#"><span class="mai-logo-facebook-f"></span></a>
+            <a href="#"><span class="mai-logo-twitter"></span></a>
+            <a href="#"><span class="mai-logo-youtube"></span></a>
+            <a href="#"><span class="mai-logo-linkedin"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer> <!-- // container  -->
+
+  <script>
+    // 유효성 검사
+    var form2 = document.form;
+    var form = document.querySelector("form");
+    form.addEventListener("submit", function(e) {
+
+      document.querySelector("#title").value = document.querySelector("#title").value.trim();
+      if(document.querySelector("#title").value.length == 0) {
+        alert("봉사제목을 입력해주세요!");
+        form2.title.focus();
+        e.defaultPrevented();
+      }
+
+     
+      if(document.querySelector("#category").value == null) {
+        alert("카테고리를 선택해주세요!");
+        e.defaultPrevented();
+      }
+
+      if(document.querySelector("#limitNum").value.length == 0) {
+        alert("모집인원을 입력해주세요!");
+        e.defaultPrevented();
+      }
+
+      
+    });
+  
+    //document.querySelector("#limitNum").onclick = function() {
+   //   alert("test");
+    //};
+   </script>
+  
+<script src="../assets/js/jquery-3.5.1.min.js"></script>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="../assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+<script src="../assets/vendor/wow/wow.min.js"></script>
+
+<script src="../assets/vendor/fancybox/js/jquery.fancybox.min.js"></script>
+
+<script src="../assets/vendor/isotope/isotope.pkgd.min.js"></script>
+
+<script src="../assets/js/google-maps.js"></script>
+
+<script src="../assets/js/theme.js"></script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+

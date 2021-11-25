@@ -1,0 +1,106 @@
+<!DOCTYPE>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+	<title>관리자:문의사항 등록</title>
+	
+	<!-- link -->
+	<link rel="stylesheet" href="../assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/maicons.css">
+  <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
+  <link rel="stylesheet" href="../assets/vendor/owl-carousel/css/owl.carousel.css">
+  <link rel="stylesheet" href="../assets/vendor/fancybox/css/jquery.fancybox.css">
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body>
+	<div id="wrap">
+		<div class="head">
+		  <div class="container">
+		    <div class="header">
+					<h6 class="navbar-brand">Happy<b class="text-primary logo">Share</b></h6>
+					<div class="btn-logoout">
+						<button type="button" class="btn btn-primary btn-sm btn-logo">로그아웃</button>
+					</div>
+				</div>
+		  </div>
+		</div>
+		<!-- //head -->
+		
+		<div class="menu">
+			<ul>
+				<li><a href="#" >회원정보조회</a></li>
+				<li><a href="#">모금&봉사활동관리</a></li>
+				<li><a href="#">공지사항관리</a></li>
+				<li><a href="#" class="on"> 문의사항관리</a></li>
+				<li><a href="#">챌린지사항관리</a></li>
+			</ul>
+		</div>
+		<!-- //menu -->
+		
+	  <div class="ad-main">
+      <div class="ad-main-infor">
+        <div class="write-wrap">
+          <h4 class="mb-5">문의사항 등록</h4>
+          <form action"#">
+			<div class="form-group">
+				<label for="category" class="f-category" style="margin-bottom: 20px;">문의분야</label><br>
+				<select name="category"  >
+				  <option selected>선택하세요</option>
+				  <option value="untact">함께해요</option>
+				  <option value="children">나눔이야기</option>
+				  <option value="teen">모금함</option>
+				  <option value="elder">챌린지</option>
+				  <option value="handicapped">사이트이용</option>
+				  <option value="other">기타</option>
+			  </select>
+			  </div>
+            <!-- //문의분야 -->
+            <div class="form-group">
+              <label for="f-title">제목</label>
+              <input type="text" class="form-control" id="f-title" name="title">
+            </div>
+            <!-- //제목 -->
+            <div class="form-group">
+              <label for="f-content">내용</label>
+              <textarea name="content" id="f-content" cols="30" rows="8" class="form-control"></textarea>
+            </div>
+            <!-- //내용 -->
+            <div class="form-group row">
+					    <label for="f-file" class="col-sm-1 col-form-label">파일첨부</label>
+					    <div class="col-sm-11">
+                <input type="file" class="form-control-file" id="f-file" name='fileUpload'>
+					    </div>
+					    <label for="f-file" class="col-sm-1 col-form-label">파일첨부</label>
+              <div class="col-sm-11">
+                <input type="file" class="form-control-file" id="f-file" name='fileUpload'>
+              </div>
+              <label for="f-file" class="col-sm-1 col-form-label">파일첨부</label>
+              <div class="col-sm-11">
+                <input type="file" class="form-control-file" id="f-file" name='fileUpload'>
+              </div>
+					  </div>
+					  <!-- //파일첨부 -->
+					  <div class="form-group">
+              <label for="f-content" class="sr-only">등록</label>
+              <input type="submit" value="등록" class="btn btn-primary">
+              <label for="f-content" class="sr-only">삭제</label>
+              <input type="submit" value="이전" class="btn btn-secondary">
+            </div>
+            <!-- //등록 -->
+          </form>
+				</div>
+				<!-- //write-wrap -->
+			</div>
+			<!-- //form -->
+		</div>
+		<!-- //ad-main -->
+		
+	</div>
+	<!-- //wrap -->
+</body>
+</html>
+ 
+
+

@@ -1,0 +1,1427 @@
+ '
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <title>자원봉사 일감정보 &lt; 참여하기 &lt; 봉사공터 | 수원시자원봉사센터</title>
+    <meta charset="utf-8"/>
+    
+
+    <meta name="viewport" content="width=1200" />    
+
+
+    
+    <!-- <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache"> 
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43651010-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-43651010-2');
+    </script>
+    
+	
+	<link href="/resources/front/css/suwon/GoogleWebFont.css" rel="stylesheet"> 
+		<link rel="shortcut icon" href="/resources/front/img/favicon.ico">
+		<link href= "/resources/front/css/suwon/reset.css?v=2" rel="stylesheet">
+		<link href= "/resources/front/css/suwon/layout.css?v=2" rel="stylesheet">
+		<link href= "/resources/front/css/suwon/jquery-ui.css" rel="stylesheet"> 
+		<link href= "/resources/front/css/suwon/contents.css?v=3" rel="stylesheet">
+	    <link type="text/css" href="/resources/spi/jquery/qtip2/jquery.qtip.css" rel="stylesheet"/>
+        <link href="/resources/front/css/suwon/main.css?v=2" rel="stylesheet">
+		<link href="/resources/front/css/suwon/jquery.bxslider.css" rel="stylesheet">
+
+	    <script type="text/javascript">
+            	var CTX_PATH = "";
+            	var SYSTEM_NM = "수원시자원봉사센터";
+                if (!window.console){ console = {log: function() {}} };
+            </script>
+        <script type="text/javascript" src="/resources/front/js/suwon/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="/resources/spi/jquery/highlight/jquery.highlight-4.js"></script>
+        <script type="text/javascript" src="/resources/spi/jquery/validation/jquery.form.min.js"></script>
+            <script type="text/javascript" src="/resources/spi/jquery/validation/jquery.validate.min.js"></script>
+            <script type="text/javascript" src="/resources/salmon/plugins/jquery.salmon.validate.js"></script>
+            <script type="text/javascript" src="/resources/front/FE/js/jquery.front.validate.js"></script>
+            <script type="text/javascript" src="/resources/spi/jquery/qtip2/jquery.qtip.min.js"></script>
+        <!-- <script src="/resources/front/js/suwon/Chart.bundle.js"></script> -->
+		<script src="/resources/front/js/suwon/jquery.placeholder.min.js"></script>
+		<script src="/resources/front/js/suwon/jquery-ui.js"></script>
+		<script src="/resources/front/js/suwon/fontfaceonload.js"></script>
+		<script src="/resources/front/js/suwon/hoverIntent.js"></script>
+		<script src="/resources/front/js/suwon/iscroll.js"></script>
+		<script src="/resources/front/js/suwon/datepicker-ko.js"></script>		
+		<script src="/resources/front/nicEdit/nicEdit-noupload.js"></script>		
+		<script src="/resources/front/js/suwon/jquery.bxslider.js"></script>	
+		<script src="/resources/front/js/suwon/front.js?v=2"></script>		
+        <script src="/resources/front/js/suwon/main.js?v=2"></script>
+        
+        <link rel="stylesheet" href="/resources/front/css_new/jquery.fullPage.css" />
+        <link rel="stylesheet" href="/resources/front/css_new/swiper.min.css">
+        <link rel="stylesheet" href="/resources/front/css_new/main_new.css?v=3" />  <!-- main css new버전 생성 --> 
+        <script src="/resources/front/js_new/swiper.js"></script>
+	    <script src="/resources/front/js_new/jquery.fullPage.js"></script>     <!-- base, parallax fullpage, swiper  -->
+	    <script src="/resources/front/js_new/slick.min.js"></script>           <!-- base, 하단배너(페북,유튜브,소배너) -->
+        <script src="/resources/front/js_new/gnb_menu.js?v=2"></script>            <!-- main js -->
+        
+	
+	
+        
+    
+		<meta charset="utf-8">
+		
+	
+    <script type="text/javascript">
+        function jsPrint(){
+            $("#content").printElement({
+                printMode: 'popup', 
+                overrideElementCSS : [
+                    '/resources/front/FE2/css/print.css', 
+                    {href: '/resources/front/FE2/css/print.css', media: 'print'}                              
+                ],
+                leaveOpen: false // 인쇄 후 창닫기
+            });
+        };
+        function jsCheckFileSize(elem, maxsizeMb){
+            var maxsize = maxsizeMb * 1024*1024;
+            var selectedSize = 0;
+            for (i = 0; i < elem.files.length; i++) {
+                selectedSize += elem.files[i].size;
+            }
+            if (selectedSize > maxsize) {
+                alert(maxsizeMb + "MB미만까지 업로드 가능합니다.");
+                elem.value="";
+            }
+        }
+        function jsCheckInputBytes (value, maxBytes) {
+            var fChar = value.match(/[^ㄱ-힣]/gi);
+            var fLength = fChar != null ? fChar.length : 0;
+            
+            var lChar = value.match(/[ㄱ-힣]/g);
+            var lLength = lChar != null ? lChar.length : 0;
+
+            var total = fLength + (lLength * 3);
+
+            return total <= maxBytes;
+        }
+    </script>
+    
+</head>
+ 
+<body> 
+
+    
+    
+    <div id="wrap" class="contents">
+    
+        
+            <div id="hd_wrap_sub"> <!-- sub header 감싸줬음 -->
+                <form name="form_logout" method="post">
+        <input type="hidden" name="mode" value="member_logout">
+        <input type="hidden" name="returnurl" value="true">
+    </form>
+    <form name="form_chk" method="post">
+        <input type="hidden" id="hasSeesawtalkUid" name="hasSeesawtalkUid" value=''>
+        <input type="hidden" id="id" name="id" value="">
+    </form>
+    
+    <!-- gnb -->
+    <header id="hd_wrap">
+    
+	    <div class="hd_bg">
+            <div class="hd_menu" id="gnb_pc">
+                <div class="w_pixin">
+                    <div class="gnb_top">
+                        <div class="hd_bx hd_logo">
+                            <a href="/">
+                                <img class="off" alt="착한공터 로고" src="/resources/front/img/suwon/main_new/top_logo_new.png">
+                                <img class="on" alt="착한공터 로고" src="/resources/front/img/suwon/main_new/top_logo_over_new.png">
+                            </a>
+                        </div>                     
+                        <div class="hd_mem">
+                            <a class="i_all m_login target_focus" href="/fe2/login/NR_login.do"><span>로그인</span></a>
+                                <a class="i_all m_join" href="/fe2/user/NR_join.do"><span>회원가입</span></a>
+                            </div>
+                    </div>
+                    
+                    <ul class="gnb_dp1_wrap" id="gnb">
+                        <li class="gnb_dp1">
+                            <div><span><a href="/fe2/volunteer/NR_find.do" class="menu_d1">봉사공터</a></span></div>
+                            <ul class="smenu">
+                                <li class="submenu1"><a class="menu1" href="/fe2/volunteer/NR_find.do">참여하기</a></li>
+                                <li class="submenu2"><a class="menu2" href="/fe2/volunteer/resultfile/NR_guide.do">봉사실적 파일접수</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_dp1">
+                            <div><span><a href="/fe2/bbs/NR_index.do?bbsCd=14" class="menu_d1">재능공터</a></span></div>
+                            <ul class="smenu">
+                                <li class="submenu1"><a class="menu1" href="/fe2/bbs/NR_index.do?bbsCd=14">재능공터</a></li>
+                                <li class="submenu2"><a class="menu2" href="/fe2/bbs/NR_form.do?bbsCd=14">재능등록</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_dp1">
+                            <div><span><a href="/fe2/contrib/NR_intro.do" class="menu_d1">마일리지공터</a></span></div>
+                            <ul class="smenu">
+                                <li class="submenu1"><a class="menu1" href="/fe2/contrib/NR_intro.do">마일리지 소개</a></li>
+                                <li class="submenu2"><a class="menu2" href="/fe2/contrib/NR_store.do">할인가맹점 이용</a></li>
+                                <li class="submenu2"><a class="menu2" href="/fe2/contrib/NR_index.do">마일리지 기부함</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_dp1">
+                            <div><span><a href="/fe2/bbs/NR_index.do?bbsCd=17" class="menu_d1">캠페인</a></span></div>
+                            <ul class="smenu">
+                                <li class="submenu1"><a class="menu1" href="/fe2/bbs/NR_index.do?bbsCd=17">캠페인</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_dp1">
+                            <div><span><a href="/fe2/bbs/NR_index.do?bbsCd=15" class="menu_d1">시민공터</a></span></div>
+                            <ul class="smenu">
+                                <li class="submenu1"><a class="menu1" href="/fe2/bbs/NR_index.do?bbsCd=15">시민 제안</a></li>
+                                <li class="submenu2"><a class="menu2" href="/fe2/bbs/NR_form.do?bbsCd=15">제안하기</a></li>
+                            </ul>
+                        </li>
+                         <li class="gnb_dp1">
+                            <div><span><a href="/fe2/rewards/benefit_accident/index.do" class="menu_d1">드림공터</a></span></div>
+                            <ul class="smenu">
+                                <li class="submenu1"><a class="menu1" href="/fe2/rewards/benefit_accident/index.do">종합보험</a></li>
+                                <li class="submenu2"><a class="menu2" href="/fe2/rewards/benefit_excellent/index.do">포상</a></li>
+                                <li class="submenu3"><a class="menu3" href="/fe2/rewards/benefit_health/index.do">건강검진</a></li>
+                                <li class="submenu4"><a class="menu4" href="/fe2/rewards/benefit_program/index.do">우수프로그램</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_dp1">
+                            <div><span><a href="/fe2/education/NR_index.do" class="menu_d1">배움공터</a></span></div>
+                            <ul class="smenu">
+                                <li class="submenu1"><a class="menu1" href="/fe2/education/NR_index.do">교육 프로그램</a></li>
+                                <li class="submenu2"><a class="menu2" href="/fe2/education/NR_form.do">교육의뢰</a></li>
+                                <li class="submenu3"><a class="menu3" href="/fe2/education/NR_find.do">교육일정</a></li>
+                                <li class="submenu4"><a class="menu4" href="/fe2/bbs/NR_index.do?bbsCd=10">교육자료실</a></li>
+                                <li class="submenu5"><a class="menu5" href="/fe2/bbs/NR_index.do?bbsCd=23">온라인 교육자료</a></li>                        
+                            </ul>
+                        </li>
+                        <li class="gnb_dp1">
+                            <div><span><a href="/fe2/information/info_value/index.do" class="menu_d1">센터안내</a></span></div>
+                            <ul class="smenu">
+                                <li class="submenu1"><a class="menu1" href="/fe2/information/info_value/index.do">센터소개</a></li>
+                                <li class="submenu2"><a class="menu2" href="/fe2/information/info2_organ/index.do">함께하는 사람들</a></li>
+                                <li class="submenu3"><a class="menu3" href="/fe2/bbs/NR_index.do?bbsCd=1">센터소식</a></li>
+                                <li class="submenu4"><a class="menu4" href="/fe2/information/info4_charge/index.do">동 자원봉사 캠프</a></li>
+                                <li class="submenu5"><a class="menu5" href="/fe2/bbs/NR_index.do?bbsCd=11">협약 및 후원현황</a></li>
+                                <li class="submenu8"><a class="menu8" href="/fe2/bbs/NR_index.do?bbsCd=21">문의사항</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+            </div>
+           <style>
+</style>
+
+    <!-- 퀵메뉴 -->
+    <div class="quickmenu-wrap">
+        <div class="quickmenu-toggle">
+            <button id="quickmenu-toggle-button">Quick Menu</button>
+        </div>
+        <div id="quickmenu">
+            <div class="quickmenu-item">
+                <ul>
+                    <li><a class="quick-link notice" href="/fe2/bbs/NR_index.do?bbsCd=1">공지사항</a></li>
+                    <li><a class="quick-link shop" href="/fe2/contrib/NR_store.do">할인가맹점<br>이용</a></li>
+                    <li><a class="quick-link data" href="/fe2/bbs/NR_index.do?bbsCd=7">서식자료실</a></li>
+                    <li><a class="quick-link edu" href="/fe2/bbs/NR_view.do?bbsSeq=3950&bbsCd=1">수요처관리자<br>교육 안내</a></li>
+                    <li><a class="quick-link file" href="/fe2/volunteer/resultfile/NR_guide.do">봉사실적<br>파일접수</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--// 퀵메뉴 -->
+    
+<script type="text/javascript">
+$(function(){
+    $("#quickmenu-toggle-button").on("click", function(){
+        $('#quickmenu').animate({width: 'toggle'});
+    });
+});
+</script>
+        
+        
+    
+	    <!--서브-->
+	    
+<style>
+.targetCd, .targetCd3, .targetCd1, .targetCd2{line-height:28px;text-align:center;}
+.targetCd {
+	font-family: 'Roboto', sans-serif;
+    background: #4967b0 !important;
+    color: #FFF!important;
+    font-size: 13px!important;
+    font-weight: 500!important;
+    vertial-align:middle;
+    padding: 0px 10px!important;
+    height:28px
+}
+
+.targetCd3 {
+	font-family: 'Roboto', sans-serif;
+    background: #108922 !important;
+    color: #FFF!important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    padding: 0px 10px!important;
+    height:28px
+}
+
+.targetCd1 {
+	font-family: 'Roboto', sans-serif;
+    background: #4285F4!important;
+    color: #FFF!important;
+    font-size: 13px!important;
+    font-weight: 500!important;
+    padding: 0px 10px!important;
+    height:28px
+}
+
+.targetCd2 {
+	font-family: 'Roboto', sans-serif;
+    background: #e13200 !important;
+    color: #FFF!important;
+    font-size: 13px!important;
+    font-weight: 500!important;
+    padding: 0px 10px!important;
+    height:28px
+}
+</style>	
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script src='/resources/front/FE2/js/sns.js'></script>
+
+<script language="javascript">
+var aFoucs = false;
+var enter = false;
+var firstId = '';
+var dataLength = 0;
+var talentDivData;
+
+(function ( $ ) {
+    
+    $.js_grpCdList = (function() {
+        
+        $.ajax({
+           type     : 'GET',
+           url      : '/fe2/volunteer/JR_talentList.do',
+           dataType :'json',
+           data:{
+           }  
+           ,error :function(request,status,error){
+               console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+           }
+           ,success :function(data){
+               
+               talentDivData = data;
+               if(data.length == 0){
+                   alert('검색결과가 존재하지 않습니다.');
+                   return false;
+               }
+
+               // 활동분류
+               $( "#grpCd" ).empty();
+               $( "#grpCd" ).append('<option value="">전체</option>'); 
+               for(i=0;i<data.length;i++ ){
+                   if(data[i].subGrpCd != null){
+                       $( "#grpCd" ).append('<option value="' + data[i].prvCd + '">' + data[i].prvNm + '</option>');                       
+                   }
+               }
+
+               $("#grpCd").val($('#grpCd option').eq(0).val());
+
+               // 활동분류상세
+               $( "#prvCd" ).empty();
+               for(i=0;i<data.length;i++ ){
+                   if(($("#grpCd").val() == data[i].prvCd.substring(0,3)) && (data[i].subGrpCd == null)){
+                       $( "#prvCd" ).append('<option value="' + data[i].prvCd + '">' + data[i].prvNm + '</option>');                      
+                   }
+               }
+               
+               $("#prvCd").val($('#prvCd option').eq(0).val());
+           }
+       });  
+    });
+})(jQuery)
+
+$.initDate = (function() {
+    var d = new Date(),
+    month = '' + (d.getMonth() + 1),
+    day = '' + d.getDate(),
+    year = d.getFullYear();
+    if (month < 10) month = '0' + month;
+    $('#search-ym').html( [year,'년 ', month+'월'].join(''));
+    
+});
+	
+$(document).ready(function() {
+    
+    var d = new Date();
+    var month;
+    var year;
+    
+    var sun = '<td class="std std_sun">{0}</td>';
+    var wd = '<td><span class="scaldata">{0}</span></td>';
+    var sat = '<td class="std std_sat">{0}</td>';
+    
+    var workCount = 0;
+    
+    // 활동분류 셀박 옵션 획득
+    $.js_grpCdList();
+    
+    // 캘린더 현재 년,월 초기화
+    $.initDate();
+    
+	///////// 스케쥴 목록 가져오기
+	month = '' + (d.getMonth() + 1)
+	year  = d.getFullYear();
+    if (month.length < 2) 
+        month = '0' + month;
+	    
+    refresh_calendar();
+	    
+    display7Days();
+	    
+
+//////////////////////// 키 이벤트 시작  //////////////////////
+    
+    // 봉사시작일 인풋박스 키 이벤트(자릿수에 따른 점 찍기)
+    $("input[name='startDt1']:first").keyup(function(e) {
+        js_makeDate(e, $(this));
+    });
+
+    // 봉사종료일 인풋박스 키 이벤트(자릿수에 따른 점 찍기)
+    $("input[name='endDt1']:first").keyup(function(e) {
+        js_makeDate(e, $(this));
+    });
+    
+    // 재능분류 변경시
+    $('#grpCd').change(function() { 
+        // 재능분류상세변경
+        $( "#prvCd" ).html('');
+        $( "#prvCd" ).append('<option value="">전체</option>'); 
+        for(i=0;i<talentDivData.length;i++ ){
+            if((this.value == talentDivData[i].prvCd.substring(0,3)) && (talentDivData[i].subGrpCd == null)){
+                $( "#prvCd" ).append('<option value="' + talentDivData[i].prvCd + '">' + talentDivData[i].prvNm + '</option>');
+            }
+        }
+        $("#prvCd").val($('#prvCd option').eq(0).val());
+    });
+    
+    $(function () {
+        $(document.body).delegate(":input", "keyup", function (e) {
+            if (e.which == 13)
+                refresh_calendar();
+        });
+        $(document.body).delegate(".targetCd", "keyup", function (e) {
+            if (e.which == 13){
+                aFoucs = false;
+                enter = true;
+            }
+        });
+        $(document.body).delegate(".targetCd2", "keyup", function (e) {
+            if (e.which == 13){
+                aFoucs = false;
+                enter = true;
+            }
+        });
+        $(document.body).delegate(".targetCd3", "keyup", function (e) {
+            if (e.which == 13){
+                aFoucs = false;
+                enter = true;
+            }
+        });
+    });
+    
+    // 캘린더 이전달 버튼 이벤트
+    $("#prev-month").on("click", function() {
+        
+        if(month>1)      {    month--;               }
+        else             {    month=12; year--;      }
+        
+        if (month < 10)  {   month = '0' + month;    }
+        
+        $('#search-ym').html( [year,'년 ', month,'월'].join(''));
+        refresh_calendar();
+    });
+    
+    // 캘린더 다음달 버튼 이벤트
+    $("#next-month" ).on( "click", function() {
+        
+        if(month < 12)   {   month++;                }
+        else             {   month=1; year++;        }
+        
+        if (month < 10)  {   month = '0' + month;    }
+        
+        $('#search-ym').html( [year,'년 ', month,'월'].join(''));
+        refresh_calendar();
+    });
+    
+    // 활동구분 라디오버튼 (단기일감, 장기일감, 프로젝트일감)
+    $('input[type=radio]').change(function() {
+        refresh_calendar();
+    });
+    
+    // 활동분류 셀박
+    $( "#grpCd" ).on( "change", function() {
+        refresh_calendar();
+    });
+
+    // 활동분류 상세 셀박
+    $( "#prvCd" ).on( "change", function() {
+        refresh_calendar();
+    });
+
+    // 봉사대상 셀박
+    $( "#typeCd" ).on( "change", function() {
+        refresh_calendar();
+    });
+    
+    
+    //달력의 날짜 클릭시 활동구분별로 일감 목록 갱신
+    $( "body" ).delegate( "p", "click", function(e) {
+        
+          var id_ = e.target.id;
+          
+          if(id_.indexOf('p_')>-1) {
+              
+              var day = $('#'+id_).text();
+              var searchProjectCd = $(":input:radio[name=activityCD]:checked").val();
+              
+              emptyList('101');
+              emptyList('102');
+              emptyList('103');
+
+              if(searchProjectCd=='') {
+                  makeList(day, '101');
+                  makeList(day, '102');
+                  makeList(day, '103');
+              } else if(searchProjectCd=='101' || searchProjectCd=='102' || searchProjectCd=='103') {
+                  makeList(day, searchProjectCd);
+              }
+          }
+    });
+
+    //달력의 날짜 안의 봉사자 유형별 링크 클릭시 활동구분별로 일감 목록 갱신
+    $( "body" ).delegate( "a", "click", function(e) {
+        
+        var id_ = e.target.id;
+        var day = id_.split('_');
+        var searchProjectCd = $(":input:radio[name=activityCD]:checked").val();
+        
+        var searchTargetCd = '';
+        if(id_.indexOf('all_')> - 1) {
+            searchTargetCd = 'all';
+        } else if(id_.indexOf('adult_')> - 1) {
+        	searchTargetCd = '2';
+        } else if(id_.indexOf('teen_')> - 1) {
+        	searchTargetCd = '3';
+        }
+
+        emptyList('101');
+        emptyList('102');
+        emptyList('103');
+        
+        if(searchProjectCd==''){
+            makeList(day[1], '101', searchTargetCd);
+            makeList(day[1], '102', searchTargetCd);
+            makeList(day[1], '103', searchTargetCd);
+        } else if(searchProjectCd=='101' || searchProjectCd=='102' || searchProjectCd=='103') {
+            makeList(day[1], searchProjectCd, searchTargetCd);
+        }
+    });
+
+//////////////////////// 키 이벤트 종료  //////////////////////
+	    
+
+//////////////////////// 유틸 함수 시작  //////////////////////
+    
+    
+    
+    // 자릿수에 따른 점찍기 (예: 2018.06.15)
+    var js_makeDate = function (e, thisId) {
+        
+        var key;
+        
+        if (e.keyCode == 8 || e.keyCode == 46) {
+            return;
+        }
+        if(e.keyCode >= 96 || e.keyCode <= 105) {
+            if(e.keyCode = 96){key = 0};
+            if(e.keyCode = 97){key = 1};
+            if(e.keyCode = 98){key = 2};
+            if(e.keyCode = 99){key = 3};
+            if(e.keyCode = 100){key = 4};
+            if(e.keyCode = 101){key = 5};
+            if(e.keyCode = 102){key = 6};
+            if(e.keyCode = 103){key = 7};
+            if(e.keyCode = 104){key = 8};
+            if(e.keyCode = 105){key = 9};
+        } else {
+            key=String.fromCharCode(e.keyCode); 
+        }
+        if(!(key>=0&&key<=9))thisId.val(thisId.val().substr(0,thisId.val().length-1));
+        var value=thisId.val();
+        if(value.length==4||value.length==7)thisId.val(thisId.val()+'.');
+    };
+    
+    
+    
+    $.formatDate = (function(date) {
+        var d = new Date(date),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+
+        return [year, month, day].join('-');
+    });
+    
+    String.prototype.formatUnicorn = String.prototype.formatUnicorn ||
+    function () {
+        "use strict";
+        var str = this.toString();
+        if (arguments.length) {
+            var t = typeof arguments[0];
+            var key;
+            var args = ("string" === t || "number" === t) ?
+                Array.prototype.slice.call(arguments)
+                : arguments[0];
+
+            for (key in args) {
+                str = str.replace(new RegExp("\\{" + key + "\\}", "gi"), args[key]);
+            }
+        }
+
+        return str;
+    };
+    
+    function refresh_calendar() {
+        
+        var my_tbody    = document.getElementById('calendar-tbody');
+        var cnt         = my_tbody.rows.length;
+        
+        for(var i=cnt-1; i>-1; i--) {
+            my_tbody.deleteRow( i ); // 하단부터 삭제
+        }
+        
+        makeCalendar();
+
+        emptyList('101');
+        emptyList('102');
+        emptyList('103');
+        
+        var searchProjectCd = $(":input:radio[name=activityCD]:checked").val();
+        if(searchProjectCd=='') {
+            makeList('', '101');
+            makeList('', '102');
+            makeList('', '103');
+        } else if(searchProjectCd=='101' || searchProjectCd=='102' || searchProjectCd=='103') {
+            makeList('', searchProjectCd);
+        }
+    };
+    
+    // 검색버튼 이벤트
+    $.fn.js_search = (function() {
+        refresh_calendar();
+    });
+    
+    // 달력에 유형별 일감건수 표시
+    function displayGroupSchedule() {
+    
+        var workCd      = '101';
+        var targetCd    = $('input[name=targetCd]:checked').val();
+        var grpCd       = $("#grpCd option:selected").val();
+        var prvCd       = $("#prvCd option:selected").val();
+        var typeCd      = $("#typeCd option:selected").val();
+        var startDt     = "";
+        var endDt       = "";
+        var searchKey   = $("#searchKey option:selected").val();
+        var searchVal   = $('#searchVal').val();
+        var searchProjectCd   = $('input:radio[name=activityCD]:checked').val();
+        
+        if ($('#startDt1').val() != '' && $('#startDt1').val() != undefined)
+            startDt = $('#startDt1').val().replace(/\./gi, '');
+        if ($('#endDt1').val() != '' && $('#endDt1').val() != undefined)
+            endDt = $('#endDt1').val().replace(/\./gi, '');
+
+        $.ajax({
+            type:'GET',
+            url:'/fe2/calendar/JR_listScheduleGroup.do',
+            dataType:'json',
+            data:{
+                year        : year,
+                month       : month,
+                workCd      : workCd,
+                grpCd       : grpCd,
+                prvCd       : prvCd,
+                targetCd    : targetCd,
+                startDt     : startDt,
+                endDt       : endDt,
+                projectCd   : searchProjectCd,
+                aprvYn      : 'Y',
+                typeCd      : typeCd,
+                searchKey   : searchKey,
+                searchVal   : searchVal
+            }  
+            ,error :function(request,status,error){
+                //alert("봉사 일정이 없습니다.");
+                
+                alert("request : " + request);
+                alert("status : " + status);
+                alert("error : " + error);
+                
+            }
+            ,success :function(data) {
+                
+                workCount = 0;
+                
+                for (i=0;i<data.length;i++ ) {
+                    
+                    var ob = 'ul-list-'+data[i]['volunteerDd'];
+                    var dObject = document.getElementById('count-list-'+data[i]['volunteerDd']);
+                    
+                    if(data[i]['allCount'] > 0) {
+                        var html1 = '<li><a href="javascript:void(0);" id="all_'+data[i]['volunteerDd']+'" class="targetCd" style="margin: 0 0 0 0; padding: 0 0 0 0; border : 0; float: left;" title="' +'전체 ' +data[i]['allCount']+'">전체 {0}</a></li>'.formatUnicorn(data[i]['allCount']);
+                    }
+                    if(data[i]['adultCount'] > 0) {
+                        var html2 = '<li><a href="javascript:void(0);" id="adult_'+data[i]['volunteerDd']+'" class="targetCd2" style="margin: 0 0 0 0; padding: 0 0 0 0; border : 0; float: left;" title="' +'성인 ' +data[i]['adultCount']+'">성인 {0}</a></li>'.formatUnicorn(data[i]['adultCount']);
+                    }
+                    if(data[i]['teenCount'] > 0) {
+                        var html3 = '<li><a href="javascript:void(0);" id="teen_'+data[i]['volunteerDd']+'" class="targetCd3" style="margin: 0 0 0 0; padding: 0 0 0 0; border : 0; float: left;" title="' +'청소년' +data[i]['teenCount']+'">청소년 {0}</a></li>'.formatUnicorn(data[i]['teenCount']);
+                    }
+
+                    var html = '';
+                    if(data[i]['allCount']>0){
+                        var html = html + html1;
+                    }
+                    if(data[i]['adultCount']>0){
+                        var html = html + html2;
+                    }
+                    if(data[i]['teenCount']>0){
+                        var html = html + html3;
+                    }
+                    var html = html + '';
+                    workCount  += 1;
+                    $('#'+ob).append(html);
+                }
+
+                $('#workCount').html(workCount);
+                
+                $( '.scalendar_w' ).fadeIn( "slow", function() {});
+            }
+        });
+    }
+    
+    function display7Days() {
+        /* 마감임박 일감 목록 가져오기 */
+        var days=3;
+        var order='end_dt';
+        var orderSort= 'asc';
+
+        $.ajax({
+            type:'GET',
+            url:'/fe2/calendar/JR_listDays.do',
+            dataType:'json',
+            data:{
+                days : days,
+                order : order,
+                orderSort : orderSort
+            }  
+            ,error :function(request,status,error){
+//              alert("봉사 일정이 없습니다.");
+            }
+            ,success :function(data){
+                $('.wfwork_list').empty();
+                for(i=0;i<data.length;i++ ){
+                    var row = '<li><a href="/fe2/volunteer/NR_view.do?seq='+data[i]['seq']+'" class="wfwork_item" title="'+data[i]['title']+'"><p class="wfwork_p01">'+data[i]['title']+'</p><p class="wfwork_p02">모집기간 : '+data[i]['startDt']+'~'+data[i]['endDt']+'</p></a></li>';
+                    
+                    $('.wfwork_list').append(row);
+                }
+            }
+        });
+    }
+    
+    function emptyList(projectCd) {
+        var ul_Id = '#ul_list_'+projectCd;
+        
+        $( ul_Id ).empty();
+        
+        $( ul_Id ).fadeIn( "slow", function() {
+            if(enter && !aFoucs && dataLength>0){
+                aFoucs = true;
+                enter = false;
+                $('#'+firstId).focus();
+            }
+        });
+    }
+    
+    function makeList(day,projectCd,targetCd) {
+        
+        var workCd='101';
+
+        var grpCd= $("#grpCd option:selected").val();
+        var prvCd= $("#prvCd option:selected").val();
+        var typeCd= $("#typeCd option:selected").val();
+        if (!targetCd) {
+            targetCd=$('input[name=targetCd]:checked').val();
+        } 
+        var startDt ="";
+        var endDt ="";
+        
+        if($('#startDt1').val()!='' && $('#startDt1').val()!= undefined)
+            startDt = $('#startDt1').val().replace(/\./gi, '');
+        if($('#endDt1').val()!='' && $('#endDt1').val()!= undefined)
+            endDt = $('#endDt1').val().replace(/\./gi, '');
+        
+        var searchKey= $("#searchKey option:selected").val()
+        var searchVal = $('#searchVal').val();
+
+        var ul_Id = '#ul_list_'+projectCd;
+
+        $( ul_Id ).fadeOut( "slow", function() {
+
+            $.ajax({
+                type:'GET',
+                url:'/fe2/calendar/JR_listDaySchedule.do',
+                dataType:'json',
+                data:{
+                    year : year,
+                    month : month,
+                    day : day,
+                    workCd : workCd,
+                    grpCd : grpCd,
+                    prvCd : prvCd,
+                    targetCd : targetCd,
+                    startDt : startDt,
+                    endDt : endDt,
+                    aprvYn : 'Y',
+                    projectCd : projectCd,
+                    typeCd : typeCd,
+                    searchKey : searchKey,
+                    searchVal : searchVal
+                }  
+                ,error :function(request,status,error){
+                    //alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+                    $(ul_Id).empty();
+                }
+                ,success :function(data){
+                    $(ul_Id).empty();
+                    $(ul_Id).html( makeListHtml (day, data) ); 
+                }
+            });
+        });
+        
+        $( ul_Id ).fadeIn( "slow", function() {
+            if(enter && !aFoucs && dataLength>0){
+                aFoucs = true;
+                enter = false;
+                $('#'+firstId).focus();
+            }
+        });
+    }
+    
+    function makeListHtml (day, data) {
+        var result='';
+
+        var searchProjectCd = $(":input:radio[name=activityCD]:checked").val();
+        for(i=0;i<data.length;i++ ){
+            
+            if(i==0)firstId= 'link'+day+'_'+searchProjectCd+'_'+data[i]['seq'];
+            
+            var file = '/resources/front/img/suwon/temp/basic.jpg';
+            if(data[i]['fileUrl']!=undefined  && data[i]['fileUrl']!="" ) {
+                file = data[i]['fileUrl'];
+            } else {
+                switch (data[i]['grpCd']) {
+                	case '101' : 
+                	case '102' : 
+                	case '103' : 
+                	case '104' : 
+                	case '105' : 
+                	case '106' : 
+                	case '107' : 
+                	case '108' : 
+                	case '109' : 
+                	case '110' : 
+                	case '111' : 
+                	case '112' : 
+                	case '113' : 
+                	case '114' : 
+                	case '115' : 
+                	case '116' : 
+	                	file = '/resources/front/img/suwon/work_' + data[i]['grpCd'] + '.jpg';
+                		break;
+                }
+            }
+            var li = '  <li>';
+            li += ' <div class="multiskin_item">';
+            li += '     <a href="/fe2/volunteer/NR_view.do?seq='+data[i]['seq']+'" class="multhum" title="'+data[i]['title']+'"><img src="'+file+'" alt="'+data[i]['title']+'"></a>';
+            li += '     <ul class="fmul_list">';
+            li += '         <li class="flist_item cols01"><span class="scalcontxt type2">'+data[i]['targetNm']+'</span></li>';
+            li += '         <li class="cols02 txalignleft">';
+            li += '             <a href="/fe2/volunteer/NR_view.do?seq='+data[i]['seq']+'" id=link'+day+'_'+searchProjectCd+'_'+data[i]['seq']+' class="mul_spt_low01" style="background-color:#f0fbf2;" title="'+data[i]['title']+'">';
+            li += '                 <p class="mulpt_01 ellips">'+data[i]['title']+'</p>';
+            li += '             </a>';
+            li += '         </li>';
+            li += '         <li class="flist_item cols03"><span class="flist_spcount">'+data[i]['numberOfPeople']+'/'+data[i]['totalOfPeople']+'</span></li>';
+            li += '         <li class="cols04">';
+            li += '             <div class="mul_spt_low02">';
+            li += '                 <p class="mul_sptp ellips"><span class="sptp_lab">모집기관 :</span> '+data[i]['demandNm']+'</p>';
+            li += '             </div>';
+            li += '         </li>';
+            li += '         <li class="cols05">';
+            li += '             <div class="mul_spt_low02">';
+            li += '                 <p class="mul_sptp"><span class="sptp_lab">모집기간 :</span> '+data[i]['startDt']+' ~ '+data[i]['endDt']+'</p>';
+            li += '             </div>';
+            li += '         </li>';
+            li += '     </ul>';
+            
+            if(data[i]['numberOfPeople'] < data[i]['totalOfPeople'])
+                li += '     <span class="mul_ingitem">모집중</span>';
+            else
+                li += '     <span class="mul_ingitem">모집완료</span>';
+            
+            li += ' </div>';
+            li += '</li>';
+            result += li;
+        }
+        return result;
+    }
+    
+    function makeCalendar() {
+        
+        $( '.scalendar_w' ).fadeOut( "fast", function() {
+            
+            $.ajax({
+                type:'GET',
+                url:'/fe2/calendar/JR_list.do',
+                dataType:'json',
+                data:{
+                    year : year,
+                    month : month
+                }  
+                ,error :function(request,status,error){
+                    //alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+                }
+                ,success :function(data){
+                    
+                    var calendarTbody = document.getElementById('calendar-tbody');
+                    
+                    for(i=0;i<data.length;i++ ) {
+                        var row = calendarTbody.insertRow( calendarTbody.rows.length ); // 하단에 추가
+                        var cell1 = row.insertCell(0);
+                        var cell2 = row.insertCell(1);
+                        var cell3 = row.insertCell(2);
+                        var cell4 = row.insertCell(3);
+                        var cell5 = row.insertCell(4);
+                        var cell6 = row.insertCell(5);
+                        var cell7 = row.insertCell(6);
+                        
+                        cell1.className = "std std_sun";
+                        cell2.className = "std";
+                        cell3.className = "std";
+                        cell4.className = "std";
+                        cell5.className = "std";
+                        cell6.className = "std";
+                        cell7.className = "std std_sat";
+                        
+                        var s1 = '';
+                        var s2 = '';
+                        var s3 = '';
+                        var s4 = '';
+                        var s5 = '';
+                        var s6 = '';
+                        var s7 = '';
+                        
+                        if(data[i]['sun']!=''){
+                            s1 = '<div id="day_{0}"><p id="p_{1}" class="scaldata">{2}</P><div id="count-list-{3}"><ul id="ul-list-{4}" class="scalcont_list" style="list-style:none; margin:0; padding:0;"></ul></div></div>'.formatUnicorn(data[i]['sun'],data[i]['sun'],data[i]['sun'],data[i]['sun'],data[i]['sun']);                           
+                        }else{
+                            s1 = '<div><p class="scaldata"></P><div><ul class="scalcont_list" style="list-style:none; margin:0; padding:0;"></ul></div></div>';                         
+                        }            
+                        if(data[i]['mon']!=''){
+                            s2 = '<div id="day_{0}"><p id="p_{1}" class="scaldata">{2}</P><div id="count-list-{3}"><ul id="ul-list-{4}" class="scalcont_list" style="list-style:none; margin:0; padding:0;"></ul></div></div>'.formatUnicorn(data[i]['mon'],data[i]['mon'],data[i]['mon'],data[i]['mon'],data[i]['mon']);
+                        }else{
+                            s2 = '<div><p class="scaldata"></P><div><ul class="scalcont_list" style="list-style:none; margin:0; padding:0;"></ul></div></div>';                         
+                        }            
+                        if(data[i]['tue']!=''){
+                            s3 = '<div id="day_{0}"><p id="p_{1}" class="scaldata">{2}</P><div id="count-list-{3}"><ul id="ul-list-{4}" class="scalcont_list" style="list-style:none; margin:0; padding:0;"></ul></div></div>'.formatUnicorn(data[i]['tue'],data[i]['tue'],data[i]['tue'],data[i]['tue'],data[i]['tue']);
+                        }else{
+                            s3 = '<div><p class="scaldata"></P><div><ul class="scalcont_list" style="list-style:none; margin:0; padding:0;"></ul></div></div>';                         
+                        }            
+                        if(data[i]['wed']!=''){
+                            s4 = '<div id="day_{0}"><p id="p_{1}" class="scaldata">{2}</P><div id="count-list-{3}"><ul id="ul-list-{4}" class="scalcont_list" style="list-style:none; margin:0; padding:0;"></ul></div></div>'.formatUnicorn(data[i]['wed'],data[i]['wed'],data[i]['wed'],data[i]['wed'],data[i]['wed']);
+                        }else{
+                            s4 = '<div><p class="scaldata"></P><div><ul class="scalcont_list" style="list-style:none; margin:0; padding:0;"></ul></div></div>';                         
+                        }            
+                        if(data[i]['thu']!=''){
+                            s5 = '<div id="day_{0}"><p id="p_{1}" class="scaldata">{2}</P><div id="count-list-{3}"><ul id="ul-list-{4}" class="scalcont_list" style="list-style:none; margin:0; padding:0;"></ul></div></div>'.formatUnicorn(data[i]['thu'],data[i]['thu'],data[i]['thu'],data[i]['thu'],data[i]['thu']);
+                        }else{
+                            s5 = '<div><p class="scaldata"></P><div><ul class="scalcont_list" style="list-style:none; margin:0; padding:0;"></ul></div></div>';                         
+                        }            
+                        if(data[i]['fri']!=''){
+                            s6 = '<div id="day_{0}"><p id="p_{1}" class="scaldata">{2}</P><div id="count-list-{3}"><ul id="ul-list-{4}" class="scalcont_list" style="list-style:none; margin:0; padding:0;"></ul></div></div>'.formatUnicorn(data[i]['fri'],data[i]['fri'],data[i]['fri'],data[i]['fri'],data[i]['fri']);
+                        }else{
+                            s6 = '<div><p class="scaldata"></P><div><ul class="scalcont_list" style="list-style:none; margin:0; padding:0;"></ul></div></div>';                         
+                        }            
+                        if(data[i]['sat']!=''){
+                            s7 = '<div id="day_{0}"><p id="p_{1}" class="scaldata">{2}</P><div id="count-list-{3}"><ul id="ul-list-{4}" class="scalcont_list" style="list-style:none; margin:0; padding:0;"></ul></div></div>'.formatUnicorn(data[i]['sat'],data[i]['sat'],data[i]['sat'],data[i]['sat'],data[i]['sat']);
+                        }else{
+                            s7 = '<div><p class="scaldata"></P><div><ul class="scalcont_list" style="list-style:none; margin:0; padding:0;"></ul></div></div>';                         
+                        }
+                        
+                        cell1.innerHTML = sun.formatUnicorn(s1); 
+                        cell2.innerHTML =  wd.formatUnicorn(s2); 
+                        cell3.innerHTML =  wd.formatUnicorn(s3); 
+                        cell4.innerHTML =  wd.formatUnicorn(s4); 
+                        cell5.innerHTML =  wd.formatUnicorn(s5); 
+                        cell6.innerHTML =  wd.formatUnicorn(s6); 
+                        cell7.innerHTML = sat.formatUnicorn(s7); 
+                    }
+                    displayGroupSchedule();
+                }
+            });
+        });
+    }
+////////////////////////유틸 함수 종료  //////////////////////
+})
+</script>
+<form:form id="csrfForm" name="csrfForm"></form:form>
+<form:form commandName="dataBean" id="dataForm" name="dataForm" autocomplete="off">
+
+    <!-- midsec_w -->
+    <div class="midsec_w">
+
+        <div class="sv_zone">
+        	<h3 class="hdtext">서브비쥬얼</h3>
+        	<ul class="sv_list">
+        		<li>
+        			<div class="sv_item" style="background-image:url('/resources/front/img/suwon/sub/sv_02.png')">
+        				<div class="sv_td">
+        					<p class="svcopy">봉사공터</p>
+        				</div>
+        			</div>
+        		</li>
+        		<li>
+        			<div class="sv_item" style="background-image:url('/resources/front/img/suwon/sub/sv_02_02.png')">
+        				<div class="sv_td">
+        					<p class="svcopy">원하는 자원봉사 정보를 한 눈에</p>
+        				</div>
+        			</div>
+        		</li>
+        	</ul>
+        	<div class="bxct_list_w">
+        		<ul class="bxct_list"></ul>
+        	</div>
+        </div>
+        
+		<!-- // 180211 추가 -->
+		<div class="midlow02_w">
+			<p class="hdtext">서브메뉴</p>
+			<div class="pixin">
+				<ul class="sm_list">
+					<li id="smli01"><a href="/fe2/volunteer/NR_find.do" class="sm_item" title="참여하기"><span class="sm_in">참여하기</span></a></li>
+				    
+                    <li id="smli03"><a href="/fe2/volunteer/resultfile/NR_guide.do" class="sm_item" title="참여하기"><span class="sm_in">봉사실적 파일접수</span></a></li>
+				</ul>
+			</div>
+		</div>				
+                  <div class="maps-container">
+      <div id="google-maps"></div>
+    </div>
+        <div class="midlow03_w">
+			<div class="midcont_w" id="container">
+				<div class="midct_w type2">
+					<div class="midct_cont type3">
+						<div class="midct_tit_low">
+							<h2 class="midct_tit">자원봉사 일감정보</h2>
+						</div>
+						<h3 class="wrf_tit">자원봉사 일감조회</h3>
+						<div class="wrskin_w">
+							<ul class="wrskin type5">
+								<li>
+									<ul class="wrtr">
+										<li class="wrth"><span class="fsp">활동구분</span></li>
+										<li class="wrtd">
+											<ul class="fcrd_list">
+                                                <li>
+                                                    <span class="fcrd_item">
+                                                        <input type="radio" name="activityCD" class="fcrd" id="activityCD01" value="" checked><label for="activityCD01">전체</label>
+                                                    </span>
+                                                </li>
+												<li>
+													<span class="fcrd_item">
+														<input type="radio" name="activityCD" class="fcrd" id="activityCD02" value="102"><label for="activityCD02">단기일감</label>
+													</span>
+												</li>
+												<li>
+													<span class="fcrd_item">
+														<input type="radio" name="activityCD" class="fcrd" id="activityCD03" value="103"><label for="activityCD03">장기일감</label>
+													</span>
+												</li>
+												<li>
+													<span class="fcrd_item">
+														<input type="radio" name="activityCD" class="fcrd" id="activityCD04" value="101"><label for="activityCD04">프로젝트일감</label>
+													</span>
+												</li>												
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="wrtr">
+										<li class="wrth"><label for="grpCd">활동분류</label></li>
+										<li class="wrtd">
+											<ul class="hwf_list">
+												<li>
+                                                    <select id="grpCd" name="grpCd" data-label="활동분류 선택"></select>
+			                                    	<label for="prvCd" class="hdtext">활동분류 상세 선택</label>
+                                                    <select id="prvCd" name="prvCd"></select>
+												</li>
+											</ul>
+										</li>
+                                        
+                                        <!-- 
+                                        <li class="wrth"><label for="startDt1">봉사기간</label></li>
+                                        <li class="">
+                                            <ul class="hwf_list">
+                                                <li>
+                                                    <label for="startDt1">봉사시작일</label>
+                                                    <input type="text" id="startDt1" name="startDt1" class="fint" style="width:80px;" placeholder="2018.01.12">
+                                                </li>
+                                                <li><span class="hwf_else">~</span></li>
+                                                <li>
+                                                    <label for="endDt1">봉사종료일</label> 
+                                                    <input type="text" id="endDt1" name="endDt1" class="fint" style="width:80px;" placeholder="2018.01.15">
+                                                </li>
+                                            </ul>
+                                        </li>
+                                         -->
+									</ul>
+								</li>
+								<li>
+									<ul class="wrtr">
+										<li class="wrth"><label for="typeCd">봉사대상</label></li>
+										<li class="wrtd">
+											<ul class="hwf_list">
+												<li><select name="typeCd" id="typeCd"  class="smf-select">
+<option value="">-- 선택하세요. --</option>
+<option value="101" >아동.청소년</option>
+<option value="102" >장애인</option>
+<option value="103" >노인</option>
+<option value="104" >쪽방촌</option>
+<option value="105" >다문화가정</option>
+<option value="106" >여성</option>
+<option value="107" >환경</option>
+<option value="108" >사회적기업</option>
+<option value="109" >고향봉사</option>
+<option value="110" >기타</option>
+</select>
+</li>
+											</ul>
+										</li>
+										<li class="wrth"><span class="fsp">봉사자유형</span></li>
+										<li class="wrtd">
+											<ul class="fcrd_list">
+												<label for="targetCd" class="hdtext">봉사자유형-전체,성인,청소년</label>
+												<li>
+													<span class="fcrd_item">
+														<input type="radio" name="targetCd" class="fcrd" id="targetCd" value="" checked="checked"><label for="targetCd">전체</label>
+													</span>
+												</li>
+												<li>
+													<span class="fcrd_item">
+														<input type="radio" name="targetCd" class="fcrd" id="targetCd2" value="2"><label for="targetCd2">성인</label>
+													</span>
+												</li>
+												<li>
+													<span class="fcrd_item">
+														<input type="radio" name="targetCd" class="fcrd" id="targetCd3" value="3"><label for="targetCd3">청소년</label>
+													</span>
+												</li>
+
+											</ul>
+										</li>
+									</ul>
+								</li>
+                                
+								<li>
+        							<form name="dataForm" method="get" onsubmit="return false;">
+        								<ul class="wrtr">
+        									<li class="wrth"><label for="parti_item07">검색어</label></li>
+        									<li class="wrtd">
+        										<ul class="hwf_list">
+        											<li>
+                                                        <select class="btsel" title="검색항목 선택" id="searchKey" style="width:130px;">
+                                                            <option value="">--선택하세요.--</option>
+                											<option value="1000">제목</option>
+                											<option value="2000">내용</option>
+                											<option value="5000">지역</option>
+        											    </select>
+                                                        <label for="searchKey" class="hdtext">검색항목 선택</label>
+        											</li>
+                                                    
+        											<label for="searchVal" class="hdtext">검색어</label>
+        											<li><input type="text" id="searchVal" class="fint" style="width:210px;"></li>
+        											<li><button type="button"  class="btn_wrin type2" onClick="javascript:$.fn.js_search()"><span>검색</span></button></li>
+        										</ul>
+        									</li>
+        								</ul>
+        							</form>
+								</li>
+							</ul>
+						</div>
+                        
+						<!-- wrscw_both -->
+						<div class="wrscw_both">
+							<!-- wrscw_left -->
+							<div class="wrscw_left">
+								<div class="wrscw_low wrscw_low01">
+									<div class="calew_w">
+										<button type="button" id="prev-month" class="btn_cale prev_cale"><span class="hdtext">이전</span></button>
+										<p class="calew_p"><span id="search-ym">2017</span></p>
+										<button type="button" id="next-month" class="btn_cale next_cale"><span class="hdtext">다음</span></button>
+									</div>
+								</div>
+								<div class="wrscw_low wrscw_low02">
+									<p class="wrscw_ment">이달에 총 <span id="workCount">0</span> 개의 자원봉사 일감이 등록되어 있습니다.</p>
+								</div>
+								<div class="wrcal_w">
+									<ul class="wring_list">
+										<li><span class="wring_item" title="전체">전체</span></li>
+										<li><span class="wring_item type2" title="청소년">청소년</span></li>
+										<li><span class="wring_item type3" title="성인">성인</span></li>
+										<li>
+											<span class="wrscw_ment">달력에 표시되는 숫자는 봉사일감 수를 의미합니다.</span>
+										</li>
+									</ul>
+								</div>
+								<div class="scalendar_w">
+									<table class="scalendar_tb type2">
+										<caption>일감정보 일정 달력 - 일, 월, 화, 수, 목, 금, 토로 구성</caption>
+										<colgroup>
+											<col style="width:14.28571428571429%" />
+											<col style="width:14.28571428571429%" />
+											<col style="width:14.28571428571429%" />
+											<col style="width:14.28571428571429%" />
+											<col style="width:14.28571428571429%" />
+											<col style="width:14.28571428571429%" />
+											<col />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="scal_sun">일</th>
+												<th scope="col" class="scal_th">월</th>
+												<th scope="col" class="scal_th">화</th>
+												<th scope="col" class="scal_th">수</th>
+												<th scope="col" class="scal_th">목</th>
+												<th scope="col" class="scal_th">금</th>
+												<th scope="col" class="scal_sat">토</th>
+											</tr>
+										</thead>
+                                        
+                                        <!-- 달력 내용 시작  -->												
+										<tbody id="calendar-tbody"></tbody>
+                                        
+									</table>
+								</div>
+							</div>
+							<!-- // wrscw_left -->
+							<!-- wrscw_right -->
+							<div class="wrscw_right">
+								<div class="wflowbox">
+									<h3 class="wflow_tit">마감임박 일감</h3>
+									<div class="wflow_scr">
+										<ul class="wfwork_list"></ul>
+									</div>
+								</div>
+							</div>
+							<!-- // wrscw_right -->
+						</div>
+						<!-- // wrscw_both -->
+						<!-- ============ 멀티형 보기 ============ -->
+						<style>
+							/* colgroup */
+							#multiTarget .ftr_list .cols01{width:10%}
+							#multiTarget .ftr_list .cols02{}
+							#multiTarget .ftr_list .cols03{width:12%}
+							#multiTarget .ftr_list .cols04{width:16%}
+							#multiTarget .ftr_list .cols05{width:20%}
+							
+							#multiTarget .multiskin_w.list_type .fmul_list .cols01{width:10%}
+							#multiTarget .multiskin_w.list_type .fmul_list .cols02{}
+							#multiTarget .multiskin_w.list_type .fmul_list .cols03{width:12%}
+							#multiTarget .multiskin_w.list_type .fmul_list .cols04{width:16%}
+							#multiTarget .multiskin_w.list_type .fmul_list .cols05{width:20%}
+						</style>
+						<div id="multiTarget" class="multiview_cont">
+
+							<h3 class="hdtext" id="viewerType">카드형 보기</h3>
+							<div class="midct_tit_low">
+								<h2 class="midct_tit">단기 일감정보</h2>
+								<ul class="lay_thum_list thumtype_list d_multitab ptype2" data-multigroup="#multiTarget">
+									<li class="active"><a href="#gal_type" class="thumtype_item" title="카드형 보기"><span class="hdtext">카드형 보기</span></a></li>
+									<li><a href="#list_type" class="thumtype_item type2" title="목록형 보기"><span class="hdtext">목록형 보기</span></a></li>
+								</ul>
+							</div>
+
+							<div class="multiskin_w gal_type">
+								<div class="ftr_list_w">
+									<ul class="ftr_list fth_type">
+										<li class="cols01">대상</li>
+										<li class="cols02">봉사활동명</li>
+										<li class="cols03">모집인원</li>
+										<li class="cols04">모집기관</li>
+										<li class="cols05">모집기간</li>
+									</ul>
+								</div>
+                                <ul id="ul_list_102" class="multiskin_list"></ul>
+							</div>
+
+							<div class="midct_tit_low mt30">
+								<h2 class="midct_tit">장기 일감정보</h2>
+							</div>
+							<div class="multiskin_w gal_type">
+								<div class="ftr_list_w">
+									<ul class="ftr_list fth_type">
+										<li class="cols01">대상</li>
+										<li class="cols02">봉사활동명</li>
+										<li class="cols03">모집인원</li>
+										<li class="cols04">모집기관</li>
+										<li class="cols05">모집기간</li>
+									</ul>
+								</div>
+								<ul id="ul_list_103" class="multiskin_list"></ul>
+							</div>
+                            
+							<div class="midct_tit_low mt30">
+								<h2 class="midct_tit">프로젝트 일감정보</h2>
+							</div>
+							<div class="multiskin_w gal_type">
+								<div class="ftr_list_w">
+									<ul class="ftr_list fth_type">
+										<li class="cols01">대상</li>
+										<li class="cols02">봉사활동명</li>
+										<li class="cols03">모집인원</li>
+										<li class="cols04">모집기관</li>
+										<li class="cols05">모집기간</li>
+									</ul>
+								</div>
+								<ul id="ul_list_101" class="multiskin_list"></ul>
+							</div>
+						</div>
+						<!-- // ============ 멀티형 보기 ============ -->
+					</div>
+				</div>
+			</div>
+		</div>
+        <script language="javascript">Suwon.subMenuRock("#smli01");</script>
+    </div>
+    <!-- // midsec_w -->
+</form:form> 
+
+	    
+	    
+	      <div class="section fp-auto-height" id="section4">
+            <!-- footer -->
+                <div class="footer">
+                    <div class="flow01_w">
+                        <div class="pixin">
+                            <ul class="fbotm_list">
+                                <li><a href="/fe2/etc/etc_private/index.do" class="fbotm_item" title="개인정보처리방침">개인정보처리방침</a></li>
+                                <li><a href="/fe2/etc/etc_email_collection/index.do" class="fbotm_item" title="이메일무단수집거부">이메일무단수집거부</a></li>
+                                <li><a href="/fe2/information/info_map/index.do" class="fbotm_item" title="찾아오시는길">찾아오시는길</a></li>
+                            </ul>
+                            <ul class="fbotsns_list">
+                                <li><a href="https://ko-kr.facebook.com/suwonvol/" class="fbotsns fsns01" target="_blank" title="페이스북 바로가기"><span class="hdtext">페이스북 바로가기</span></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCdVMK-HE5iBFvm93C7fZl8A" class="fbotsns fsns02" target="_blank" title="유투브 바로가기"><span class="hdtext">유투브 바로가기</span></a></li>
+                                <li><a href="https://www.instagram.com/suwonvol/" class="fbotsns fsns03" target="_blank" title="인스타그램 바로가기"><span class="hdtext">인스타그램 바로가기</span></a></li>
+                                <li><a href="https://www.1365.go.kr/" class="fbotsns fsns04" target="_blank" title="1365 바로가기"><span class="hdtext">1365 바로가기</span></a></li>
+                                <li><a href="https://blog.naver.com/suwonvolnews" class="fbotsns fsns05" target="_blank" title="네이버블로그 바로가기"><span class="hdtext">네이버블로그 바로가기</span></a></li>
+                                <li><a href="https://www.suwonvol.com/fe2/bbs/NR_index.do?bbsCd=24" class="fbotsns fsns06" target="_blank" title="청렴메아리 바로가기"><span class="hdtext">청렴메아리 바로가기</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flow02_w">
+                        <div class="pixin">
+                            <span class="botlogo"><img src="/resources/front/img/suwon/botlogo.png" alt="수원시 자원봉사센터 로고"></span>
+                            <div class="botadr_w">
+                                <address class="botadr">
+                                    (우편번호 16313) 경기도 수원시 장안구 영화로 71번길 2 수원시자원봉사센터
+                                    <span class="botico botico01" style="margin-left:25px;" title="전화">031-253-1365</span>
+                                    <span class="botico botico02" style="margin-left:10px;" title="팩스">031-252-9002</span>
+                                </address>
+                                <address class="botadr">
+                                    (우편번호 16688) 경기도 수원시 영통구 태장로39 수원시자원봉사센터 영통분소 2층
+                                    <span class="botico botico01" style="margin-left:10px;" title="전화">031-205-1365</span>
+                                    <span class="botico botico02" style="margin-left:10px;" title="팩스">031-205-1367</span> <br>
+                                    대표메일 sotong@suwonvol.com
+                                </address>
+                                <p class="botcopy">Copyright (c) 2020 SWVC. All rights reserved.</p>
+                                </div>
+                            <a class="botWeblogo" href="http://www.kwacc.or.kr/CertificationSite/WA/List" target="_blank" title="한국웹접근성평가센터 인증현황 바로가기_새창">
+                                <img src="/resources/front/img/suwon/f_logo_webmark.png" alt="국가공인 웹 접근성 품질인증마크">
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- // footer -->     
+        </div>
+
+
+	    
+	    
+    
+    </div>
+
+
+<!-- 로딩중표시영역 -->
+<style>
+	/* 내용영역 덮어버리는 div (중복submit 방지 등) */
+	#layer_cover_all_page {display:none;z-index:10000;width:100%;height:100%;position:fixed;top:0;left:0;background:#ffffff50;text-align:center;transition:.4s;}
+	#layer_cover_all_page img {width:8%;position:fixed;top:35%;left:46%;}
+	@media (max-width:1023px){
+	    #layer_cover_all_page img {width:50px;left:50%;margin-left:-25px;}
+	}
+</style>
+
+<div id="layer_cover_all_page" class="layer_cover_all_page">
+    <img alt="처리중" src="/resources/front/img/suwon/bx_loader.gif" style="" />
+</div>
+
+<script type="text/javascript">
+	function coverup_loading_layer(){
+	    $("#layer_cover_all_page").show();
+	    $(document.activeElement).blur();  // focus 없애기
+	}
+	function uncover_loading_layer(){
+	    $("#layer_cover_all_page").hide();
+	}
+</script>
+<!-- // 로딩중표시영역 -->    
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+/* 여백 초기화 */
+body, div, dl, dt, dd, ul, li, ol, h1, h2, h3, h4, h5, h6, from, input, legend, textarea, select,
+fieldset, p, button {margin:0; padding:0;}
+
+/* 테두리 초기 */
+img, fieldset {border:0;}
+
+/* 기울기 초기화 */
+em, address {font-style:normal;}
+
+/* table 초기화 */
+table {border-collapse:collapse;}
+
+fieldset {
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+caption {
+  display:none;
+}
+
+/* layout */
+#wrap {
+	width:100%;	
+}
+
+.head {
+	width:100%;
+  border-bottom:3px solid #f0f1f6;
+}
+
+.menu {width:15%; height:92%; float:left;}
+.ad-main {width:85%; height:92%; float:right;}
+.box {width:85%; height:92%; float:right;}
+.ad-main-infor {width:100%;}
+.bottom {width:100%; height:12%;}
+
+/* loginBox */
+.loginBox {
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin-left:-10%;
+	margin-top:-10%;
+}
+
+.loginBox .navbar-brand {
+  display:block;
+	font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align:center;
+  margin-right:0;
+}
+
+/* loginInput */
+.loginInput {
+	width:400px;
+	border:3px solid #6D728B;
+	padding:50px;
+	}
+	
+/* top */
+.header {
+	position:relative;
+	
+}
+.header .btn-logoout {
+	position:absolute;
+	top:8px;
+	right:0;
+}
+
+.header .btn-logo {
+	padding:7px 24px;
+}
+
+/* menu */
+.menu {
+	position:relative; 
+}
+
+.menu ul {
+	padding:40px 30px;
+}
+
+.menu ul li {
+	font-weight:bold;
+	font-size:14px;
+	padding-top:20px;
+}
+
+.menu ul li a {
+	color:#858585;
+}
+
+.menu ul li a.on {
+	color:#2F89FC;
+}
+
+/* ad-main */
+.ad-main .ad-main-infor {
+	padding:4% 0;
+}
+
+.ad-main .ad-main-infor .serch {
+	overflow:hidden;
+	width:90%;
+	margin:0 auto;
+}
+
+.ad-main .ad-main-infor .serch .searchBtn {
+	text-align:center;
+	color:#212121;
+	font-size:11px;
+	width:40px;
+	height:30px;
+	letter-spacing:-1px;
+	vertical-align:2;
+	background:#eaeaea;
+	border:1px solid #b0b0b0;
+	padding:3px 7px;
+}
+
+.ad-main .ad-main-infor .table01, .write-wrap {
+	padding-top:40px;
+	width:90%;
+	margin:0 auto;
+}
+.ad-main .ad-main-infor .table01 table {
+	width:100%;
+	text-align:center;
+}
+.ad-main .ad-main-infor .table01 table thead {
+	background:#f7f7f7;
+}
+.ad-main .ad-main-infor .table01 table th {
+	padding:10px 0; 
+	border-bottom:1px solid #2F89FC;
+	border-top:2px solid #2F89FC;
+	border-right:1px solid #ddd;
+}
+.ad-main .ad-main-infor .table01 table td {
+	padding:10px 0;
+	border-bottom:1px solid #cecece;
+	border-right:1px solid #ddd;
+	vertical-align:middle;
+}
+	
+.ad-main .ad-main-infor .table01 table th:last-child {
+	border-right:0;
+}
+.ad-main .ad-main-infor .table01 table td:last-child {
+	border-right:0;
+}
+
+.ad-btn a.btnSubmit {
+  display: block;
+  width:85px;
+  height:35px;
+  color: #FFF;
+  letter-spacing: -0.5px;
+  font-size: 13px;
+  text-align: center;
+  line-height: 36px;
+  background:#2F89FC;
+  float:right;
+  margin-right:5px;
+}
+
+.write-wrap {
+	padding-top:0;
+}
