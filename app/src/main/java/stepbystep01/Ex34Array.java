@@ -2,11 +2,11 @@ package stepbystep01;
 
 import java.util.Scanner;
 
-public class Ex33control_continue_break {
-
+public class Ex34Array {
   public static void main(String[] args) {
 
     int kor1, kor2, kor3;
+    int[] kors = new int[3];
     int total;
     float avg;
     int menu;
@@ -16,6 +16,9 @@ public class Ex33control_continue_break {
     kor1 = 0;
     kor2 = 0;
     kor3 = 0;
+
+    for(int i=0; i < 3; i++)
+      kors[i] = 0;
 
     종료:
       while(true) {
@@ -68,11 +71,25 @@ public class Ex33control_continue_break {
 
             } while (kor3 < 0 || 100 <  kor3) ;
 
+            for(int i = 0; i < 3; i++)
+              do {
+                System.out.printf("국어%d:", i+1);
+                kors[i] = scan.nextInt();
+
+                if(kors[i] < 0 || 100 <kors[i])
+                  System.out.println("성적범위(0~100를 벗어났습니다.");
+
+              } while (kors[i] < 0 || 100 < kors[i]) ;
+
             break;
 
           case 2 :
 
+
+
             total = kor1 + kor2 + kor3;
+            total = kors[0]+kors[1]+kors[2];
+
             avg = total / 3.0f;
 
             System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
@@ -80,7 +97,7 @@ public class Ex33control_continue_break {
             System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
 
             for (int i = 0; i < 3; i++) {
-              System.out.printf("\t국어%d : %3d\n", i+1, kor1);
+              System.out.printf("\t국어%d : %3d\n", i+1, kors[i]);
             }
             System.out.printf("\t총점 : %3d\n", total);
             System.out.printf("\t평균 : %6.2f\n", avg);
@@ -97,4 +114,4 @@ public class Ex33control_continue_break {
       }
     System.out.println("bye bye!");
   }
-}
+} 
