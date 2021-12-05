@@ -38,7 +38,6 @@ public class Ex33control_continue_break {
             System.out.println("┃         성적 입력         ┃");
             System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
 
-
             do {
               System.out.print("국어1: ");
               kor1 = scan.nextInt();
